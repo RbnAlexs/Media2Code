@@ -52,7 +52,7 @@
 
 				<div class="col-xs-6 col-lg-2 titulo_header ">
 					<?php 				
-						echo '<div class="site-title"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'name' ).'</a></div>';
+						echo '<div class="site-title"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'name' ).'<span class="com">.com</span></a></div>';
 						echo '<span class="site-description hidden-xs-up"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'description' ).'</a></span>';
 					?>
 				</div>     
