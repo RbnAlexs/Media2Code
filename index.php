@@ -27,6 +27,15 @@
 					  </a>
 					</div>
 				</div>
+				<div class="col-xs-5">
+					<?php
+							$args = array( 'numberposts' => '3' );
+							$recent_posts = wp_get_recent_posts( $args );
+							foreach( $recent_posts as $recent ){
+								echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+							}
+						?>
+				</div>
 			</div>
 		</section>
 
@@ -92,8 +101,7 @@
 									endwhile; 
 								wp_reset_query();
 						} 
-					?>
-					<?php 				
+								
 					    //$wp_categorias =  wp_list_categories( array('pad_counts' => 0,'title_li'   => '', 'echo'       => false,'exclude' => 1  ) );
 					    foreach(get_categories('exclude = 1') as $categorias) {
 							$categoria_id = $categorias->cat_ID;

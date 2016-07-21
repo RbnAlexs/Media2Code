@@ -147,9 +147,10 @@ header a {
     border: none;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 554px) {
   .articulos .card {
-    border: 1px solid #ecf0f1;
+    border-left: 1px solid #ecf0f1;
+    border-bottom: 1px solid #ecf0f1;
   }
 }
 .articulos .card-block {
