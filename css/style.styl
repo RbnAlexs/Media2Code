@@ -1,0 +1,403 @@
+/*
+
+               _ _      ___            _                    
+  _ __  ___ __| (_)__ _|_  )__ ___  __| |___   __ ___ _ __  
+ | '  \/ -_) _` | / _` |/ // _/ _ \/ _` / -_)_/ _/ _ \ '  \ 
+ |_|_|_\___\__,_|_\__,_/___\__\___/\__,_\___(_)__\___/_|_|_|
+                                                            
+                                                            
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300')
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono')
+
+
+rojo = #E74C3C
+blanco = #ECF0F1
+azul = #2C3E50
+azul_02 = #3498DB
+azul_03 = #2980B9
+link_general = #3a3737
+link_general_hover = azul_02
+texto_general = #404040
+tipografia_general = 'Open Sans', sans-serif
+tipografia_titulo =  'Share Tech Mono'
+
+size_xxs = 320px
+size_xs = 480px
+size_sm = 554px
+size_md = 992px
+size_lg = 1200px
+padding = .9375rem
+
+/*!  Header  */
+ 
+.logo_header 
+	text-align center	
+	img
+		@media(min-width: size_xxs)
+			max-width: 55px
+			height: auto
+
+.titulo_header
+	padding: 0 !important
+	line-height: 3.25em
+	.site-title
+		font-size: 2em
+		text-align: center
+		margin: 0 auto
+		a
+			color: blanco
+			font-family: tipografia_titulo
+			text-decoration none
+	
+
+header
+	padding-top 5px 
+	padding-bottom 5px
+	background: azul
+	a
+		color: blanco 
+
+.sticky.is-sticky 
+	position fixed
+	left 0
+	right 0
+	top 0
+	z-index 1000
+	width 100%
+	background azul_03 
+
+.sfm-pos-right .sfm-rollback
+    right: 15px !important
+    
+.sfm-navicon-button.sf_label_default
+	position fixed !important 
+	
+.sfm-navicon-button:after
+	@media(min-width: size_xxs)
+		display none !important
+	@media(min-width: size_md)
+		display inline-block !important
+		position: absolute !important
+		left: -135% !important
+		top: 25% !important
+	
+   
+/*!  Home */
+
+.video
+	position: relative
+	.background
+		position absolute
+		width 100%
+		height 100%
+		background: url('https://underc0de.org/recursos/img/pattern.png')
+
+.container-fluid
+	.container .articulos
+		@media(min-width: size_xs)
+			padding: 10px 25px 0px;
+
+
+#contenedor_articulos
+	background: rojo	
+	
+
+.articulos
+	padding-top: padding
+	@media(min-width: 320px)
+		background: rojo
+	@media(min-width: 550px) 
+		background: #fff
+	.card-columns
+		@media(min-width: size_sm)
+			column-count: 2
+		@media(min-width: size_md)
+			column-count: 3	
+	.card
+		overflow: hidden
+		border-radius: 0 !important
+		@media(min-width: size_xxs)
+			border: none
+		@media(min-width: size_md)
+			border: 1px solid blanco;
+	.card-block
+		background: azul
+		h3 
+			text-align center
+			a
+				@media(min-width: size_xxs)
+					color: blanco
+				text-decoration: none !important
+				font-family: tipografia_titulo
+	.card-blockquote
+		img
+			width 100%
+			height auto
+			
+		
+	
+.imagen_post_home img
+	height: auto
+	opacity 1
+	-webkit-transition .3s ease-in-out
+	transition .3s ease-in-out
+	&:hover
+		opacity .5
+	@media (min-width: 320px)
+	    width: 100%
+    @media (min-width: 400px)
+    	max-height: 600px
+    	width: 100%
+    @media (min-width: 1020px)
+    	max-height: 550px
+    	width: 100%
+
+
+
+.texto_post_home
+    padding: 10px
+    background: #fff
+    @media(min-width: size_xxs)
+    	position: relative
+    	font-size: 0.85rem
+    @media(min-width: size_xs)
+    	font-size: 0.95rem
+    @media(min-width: size_md)
+    	font-size: 1rem
+    font-family: tipografia_general
+    .categoria
+    	color: link_general
+    	a
+    		color: link_general
+	    	&:hover
+	    		color: link_general_hover
+	    		text-decoration: none !important
+    .fecha
+    	color: link_general
+    .separador
+    	color: rojo
+    	font-weight: 700
+    h5
+    	text-align: left
+    	margin: 10px 0px
+    	font-weight: 500
+    	font-size 1.55rem
+    	a
+    		color: link_general
+	    	&:hover
+	    		color: link_general_hover
+	    		text-decoration: none !important
+	.extracto
+		color: texto_general
+		font-weight 100
+    		
+/*! Ocultar la mitad de posts en responsivo */
+
+.hidden-xs
+	@media (min-width: 320px)
+		display:none !important
+	@media (min-width: 550px)
+		display: inline-block !important
+		
+.proyectos
+	padding 0 !important
+	min-height 600px
+	background ttranspared
+	position relative
+	background-image url(https://enleaf.com/wp-content/uploads/2016/02/Software-development-firm.png)
+	background-attachment fixed
+	/* Magia de pseudoselecciones css3 B| (triangulo)*/
+	&:before, &:after
+		position absolute
+		top 0
+		@media(min-width size_xxs)
+			border-top 70px solid rojo
+		@media(min-width size_md)
+			border-top 70px solid #fff
+		content " "
+	&:before
+		border-left 1140px solid transparent
+		left 0
+	&:after
+		border-right 1140px solid transparent
+		right 0
+	.proyectos_background
+		position absolute
+		width 100%
+		background rgba(0, 0, 0, .75)
+	@media(min-width size_xxs)
+		overflow hidden
+	@media(min-width size_md)
+		overflow visible
+		
+/*	Single */
+
+.articulos_single
+	background #fff
+	color #000
+	font-weight normal
+	font-size 1em
+	padding-top 10px
+	padding-bottom 10px
+	.imagen_single
+		position relative
+	.texto_single 
+		@media(min-width: size_md)
+			background blanco
+			position absolute
+			width 80%
+			bottom 0
+			border-top-right-radius 50px 
+	.titulo_single
+		font-family tipografia_titulo
+		text-align left
+		@media(min-width: size_xxs)
+			font-size 1.55rem
+		@media(min-width: size_md)
+			font-size 2rem
+	img
+		width 100%
+		height auto
+	.contenido_single 
+		padding 10px 15px
+		@media(min-width: size_md)
+			margin 30px 0
+	.compartir_post
+		text-align center
+		span
+			@media(min-width size_xxs)
+				font-size 1em
+				line-height 1em
+		a 
+			font-size 2em
+		.share a 
+			color #2c3e50
+		.whats_share a
+			color #33ba46
+		.facebook_share a
+			color #3b5998
+		.twitter_share a 
+			color #50abf1
+	.tags
+		margin 0 0 35px
+		font-size 0.95em
+		a 
+			background azul
+			color blanco
+			padding 2px 5px
+			border-radius 3px
+			&:hover
+				text-decoration none
+		i 
+			color azul
+		
+		
+	
+		
+/* Pie de pagina */
+
+placeholder()
+	&::-webkit-input-placeholder
+		{block}
+	&:-moz-placeholder
+		{block}
+	&::-moz-placeholder
+		{block}
+	&:-ms-input-placeholder
+		{block}
+		
+footer
+	.site-info
+		padding-top: padding
+		padding-bottom: padding
+	background: azul_02
+	min-height: 200px
+	position: relative
+	.logo_footer 
+		text-align: center
+		img
+			width: auto
+			@media(min-width:size_xxs)
+				max-height: 100px
+			@media(min-width:size_md)
+				max-height: 130px  
+			&:hover
+				-webkit-animation: spin 0.7s infinite linear
+				-moz-animation: spin 0.7s infinite linear
+				-o-animation: spin 0.7s infinite linear
+				-ms-animation: spin 0.7s infinite linear
+	.quienes_somos
+		@media(min-width: size_xxs)
+			text-align center
+		@media(min-width: size_md)
+			text-align left
+	.site-title
+		color #fff
+		font-family: tipografia_titulo
+		
+	.aviso_privacidad
+		background: azul_03
+		.copyright
+			font-size: 0.85rem
+			text-align: center
+			color: blanco
+			a
+				color: blanco
+	.redes_sociales
+		.twitter,.facebook,.instagram
+			display: inline-block
+			> a
+				display: inline-block
+				font-size: 2.5em
+				color: blanco
+			small
+				display: inline-block
+				a
+					color: blanco
+	.hecho_de
+			text-align center
+	.suscribete
+		background transparent
+		border 0
+		outline none
+		box-shadow none
+		border-bottom 1px solid #ccc
+		border-radius 0
+		float left
+		width 85%
+		+placeholder()
+			color blanco
+	.ultimas_entradas
+		list-style square
+		li a 
+			color blanco
+		
+
+/*! General */
+
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg);}
+	100% { -webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin {
+	0% { -moz-transform: rotate(0deg);}
+	100% { -moz-transform: rotate(360deg);}
+}
+@-o-keyframes spin {
+	0% { -o-transform: rotate(0deg);}
+	100% { -o-transform: rotate(360deg);}
+}
+@-ms-keyframes spin {
+	0% { -ms-transform: rotate(0deg);}
+	100% { -ms-transform: rotate(360deg);}
+}
+
+body
+	font-family tipografia_general !important
+	color link_general
+				
+				

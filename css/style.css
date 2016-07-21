@@ -1,0 +1,522 @@
+/*
+
+               _ _      ___            _                    
+  _ __  ___ __| (_)__ _|_  )__ ___  __| |___   __ ___ _ __  
+ | '  \/ -_) _` | / _` |/ // _/ _ \/ _` / -_)_/ _/ _ \ '   |_|_|_\___\__,_|_\__,_/___\__\___/\__,_\___(_)__\___/_|_|_|
+                                                            
+                                                            
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
+/*  Header  */
+.logo_header {
+  text-align: center;
+}
+@media (min-width: 320px) {
+  .logo_header img {
+    max-width: 55px;
+    height: auto;
+  }
+}
+.titulo_header {
+  padding: 0 !important;
+  line-height: 3.25em;
+}
+.titulo_header .site-title {
+  font-size: 2em;
+  text-align: center;
+  margin: 0 auto;
+}
+.titulo_header .site-title a {
+  color: #ecf0f1;
+  font-family: 'Share Tech Mono';
+  text-decoration: none;
+}
+header {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #2c3e50;
+}
+header a {
+  color: #ecf0f1;
+}
+.sticky.is-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #2980b9;
+}
+.sfm-pos-right .sfm-rollback {
+  right: 15px !important;
+}
+.sfm-navicon-button.sf_label_default {
+  position: fixed !important;
+}
+@media (min-width: 320px) {
+  .sfm-navicon-button:after {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .sfm-navicon-button:after {
+    display: inline-block !important;
+    position: absolute !important;
+    left: -135% !important;
+    top: 25% !important;
+  }
+}
+/*  Home */
+.video {
+  position: relative;
+}
+.video .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://underc0de.org/recursos/img/pattern.png");
+}
+@media (min-width: 480px) {
+  .container-fluid .container .articulos {
+    padding: 10px 25px 0px;
+  }
+}
+#contenedor_articulos {
+  background: #e74c3c;
+}
+.articulos {
+  padding-top: 0.9375rem;
+}
+@media (min-width: 320px) {
+  .articulos {
+    background: #e74c3c;
+  }
+}
+@media (min-width: 550px) {
+  .articulos {
+    background: #fff;
+  }
+}
+@media (min-width: 554px) {
+  .articulos .card-columns {
+    column-count: 2;
+  }
+}
+@media (min-width: 992px) {
+  .articulos .card-columns {
+    column-count: 3;
+  }
+}
+.articulos .card {
+  overflow: hidden;
+  border-radius: 0 !important;
+}
+@media (min-width: 320px) {
+  .articulos .card {
+    border: none;
+  }
+}
+@media (min-width: 992px) {
+  .articulos .card {
+    border: 1px solid #ecf0f1;
+  }
+}
+.articulos .card-block {
+  background: #2c3e50;
+}
+.articulos .card-block h3 {
+  text-align: center;
+}
+.articulos .card-block h3 a {
+  text-decoration: none !important;
+  font-family: 'Share Tech Mono';
+}
+@media (min-width: 320px) {
+  .articulos .card-block h3 a {
+    color: #ecf0f1;
+  }
+}
+.articulos .card-blockquote img {
+  width: 100%;
+  height: auto;
+}
+.imagen_post_home img {
+  height: auto;
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.imagen_post_home img:hover {
+  opacity: 0.5;
+}
+@media (min-width: 320px) {
+  .imagen_post_home img {
+    width: 100%;
+  }
+}
+@media (min-width: 400px) {
+  .imagen_post_home img {
+    max-height: 600px;
+    width: 100%;
+  }
+}
+@media (min-width: 1020px) {
+  .imagen_post_home img {
+    max-height: 550px;
+    width: 100%;
+  }
+}
+.texto_post_home {
+  padding: 10px;
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+@media (min-width: 320px) {
+  .texto_post_home {
+    position: relative;
+    font-size: 0.85rem;
+  }
+}
+@media (min-width: 480px) {
+  .texto_post_home {
+    font-size: 0.95rem;
+  }
+}
+@media (min-width: 992px) {
+  .texto_post_home {
+    font-size: 1rem;
+  }
+}
+.texto_post_home .categoria {
+  color: #3a3737;
+}
+.texto_post_home .categoria a {
+  color: #3a3737;
+}
+.texto_post_home .categoria a:hover {
+  color: #3498db;
+  text-decoration: none !important;
+}
+.texto_post_home .fecha {
+  color: #3a3737;
+}
+.texto_post_home .separador {
+  color: #e74c3c;
+  font-weight: 700;
+}
+.texto_post_home h5 {
+  text-align: left;
+  margin: 10px 0px;
+  font-weight: 500;
+  font-size: 1.55rem;
+}
+.texto_post_home h5 a {
+  color: #3a3737;
+}
+.texto_post_home h5 a:hover {
+  color: #3498db;
+  text-decoration: none !important;
+}
+.extracto {
+  color: #404040;
+  font-weight: 100;
+}
+/* Ocultar la mitad de posts en responsivo */
+@media (min-width: 320px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 550px) {
+  .hidden-xs {
+    display: inline-block !important;
+  }
+}
+.proyectos {
+  padding: 0 !important;
+  min-height: 600px;
+  background: ttranspared;
+  position: relative;
+  background-image: url("https://enleaf.com/wp-content/uploads/2016/02/Software-development-firm.png");
+  background-attachment: fixed;
+/* Magia de pseudoselecciones css3 B| (triangulo)*/
+}
+.proyectos:before,
+.proyectos:after {
+  position: absolute;
+  top: 0;
+  content: " ";
+}
+@media (min-width: 320px) {
+  .proyectos:before,
+  .proyectos:after {
+    border-top: 70px solid #e74c3c;
+  }
+}
+@media (min-width: 992px) {
+  .proyectos:before,
+  .proyectos:after {
+    border-top: 70px solid #fff;
+  }
+}
+.proyectos:before {
+  border-left: 1140px solid transparent;
+  left: 0;
+}
+.proyectos:after {
+  border-right: 1140px solid transparent;
+  right: 0;
+}
+.proyectos .proyectos_background {
+  position: absolute;
+  width: 100%;
+  background: rgba(0,0,0,0.75);
+}
+@media (min-width: 320px) {
+  .proyectos {
+    overflow: hidden;
+  }
+}
+@media (min-width: 992px) {
+  .proyectos {
+    overflow: visible;
+  }
+}
+/*	Single */
+.articulos_single {
+  background: #fff;
+  color: #000;
+  font-weight: normal;
+  font-size: 1em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.articulos_single .imagen_single {
+  position: relative;
+}
+@media (min-width: 992px) {
+  .articulos_single .texto_single {
+    background: #ecf0f1;
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    border-top-right-radius: 50px;
+  }
+}
+.articulos_single .titulo_single {
+  font-family: 'Share Tech Mono';
+  text-align: left;
+}
+@media (min-width: 320px) {
+  .articulos_single .titulo_single {
+    font-size: 1.55rem;
+  }
+}
+@media (min-width: 992px) {
+  .articulos_single .titulo_single {
+    font-size: 2rem;
+  }
+}
+.articulos_single img {
+  width: 100%;
+  height: auto;
+}
+.articulos_single .contenido_single {
+  padding: 10px 15px;
+}
+@media (min-width: 992px) {
+  .articulos_single .contenido_single {
+    margin: 30px 0;
+  }
+}
+.articulos_single .compartir_post {
+  text-align: center;
+}
+@media (min-width: 320px) {
+  .articulos_single .compartir_post span {
+    font-size: 1em;
+    line-height: 1em;
+  }
+}
+.articulos_single .compartir_post a {
+  font-size: 2em;
+}
+.articulos_single .compartir_post .share a {
+  color: #2c3e50;
+}
+.articulos_single .compartir_post .whats_share a {
+  color: #33ba46;
+}
+.articulos_single .compartir_post .facebook_share a {
+  color: #3b5998;
+}
+.articulos_single .compartir_post .twitter_share a {
+  color: #50abf1;
+}
+.articulos_single .tags {
+  margin: 0 0 35px;
+  font-size: 0.95em;
+}
+.articulos_single .tags a {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+.articulos_single .tags a:hover {
+  text-decoration: none;
+}
+.articulos_single .tags i {
+  color: #2c3e50;
+}
+/* Pie de pagina */
+footer {
+  background: #3498db;
+  min-height: 200px;
+  position: relative;
+}
+footer .site-info {
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+}
+footer .logo_footer {
+  text-align: center;
+}
+footer .logo_footer img {
+  width: auto;
+}
+@media (min-width: 320px) {
+  footer .logo_footer img {
+    max-height: 100px;
+  }
+}
+@media (min-width: 992px) {
+  footer .logo_footer img {
+    max-height: 130px;
+  }
+}
+footer .logo_footer img:hover {
+  -webkit-animation: spin 0.7s infinite linear;
+  -moz-animation: spin 0.7s infinite linear;
+  -o-animation: spin 0.7s infinite linear;
+  -ms-animation: spin 0.7s infinite linear;
+}
+@media (min-width: 320px) {
+  footer .quienes_somos {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  footer .quienes_somos {
+    text-align: left;
+  }
+}
+footer .site-title {
+  color: #fff;
+  font-family: 'Share Tech Mono';
+}
+footer .aviso_privacidad {
+  background: #2980b9;
+}
+footer .aviso_privacidad .copyright {
+  font-size: 0.85rem;
+  text-align: center;
+  color: #ecf0f1;
+}
+footer .aviso_privacidad .copyright a {
+  color: #ecf0f1;
+}
+footer .redes_sociales .twitter,
+footer .redes_sociales .facebook,
+footer .redes_sociales .instagram {
+  display: inline-block;
+}
+footer .redes_sociales .twitter > a,
+footer .redes_sociales .facebook > a,
+footer .redes_sociales .instagram > a {
+  display: inline-block;
+  font-size: 2.5em;
+  color: #ecf0f1;
+}
+footer .redes_sociales .twitter small,
+footer .redes_sociales .facebook small,
+footer .redes_sociales .instagram small {
+  display: inline-block;
+}
+footer .redes_sociales .twitter small a,
+footer .redes_sociales .facebook small a,
+footer .redes_sociales .instagram small a {
+  color: #ecf0f1;
+}
+footer .hecho_de {
+  text-align: center;
+}
+footer .suscribete {
+  background: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  float: left;
+  width: 85%;
+}
+footer .suscribete::-webkit-input-placeholder {
+  color: #ecf0f1;
+}
+footer .suscribete:-moz-placeholder {
+  color: #ecf0f1;
+}
+footer .suscribete::-moz-placeholder {
+  color: #ecf0f1;
+}
+footer .suscribete:-ms-input-placeholder {
+  color: #ecf0f1;
+}
+footer .ultimas_entradas {
+  list-style: square;
+}
+footer .ultimas_entradas li a {
+  color: #ecf0f1;
+}
+/* General */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(360deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+  }
+}
+body {
+  font-family: 'Open Sans', sans-serif !important;
+  color: #3a3737;
+}
