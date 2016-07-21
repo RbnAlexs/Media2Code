@@ -43,71 +43,111 @@
 			<div class="row">
 			
 				<div class="col-xs-12 col-lg-9 card-columns">	
-					<?php	
-						//Variable para ocultar post en mobile (lo usaremos más adelante)
-						$hidden_xs = 0;
-						function home_posts($id_categoria, $post_numero){ 
-								//Query: categoría, número de post y offset
-						 		$recent = new WP_Query ('showposts='.$post_numero.'&offset=0&cat='.$id_categoria.''); 
-						 			//Titulo e imagen por categoría
-								 	echo '<div class="card card-block">';
-									    echo '<blockquote class="card-blockquote">';
-									     	echo '<h3><a href="'.get_category_link($id_categoria).'">'.get_cat_name($id_categoria).'</a></h3>';
+
+					<ul class="nav nav-tabs" role="tablist">
+
+						<?php
+						foreach(get_categories('exclude = 1') as $categorias) {
+							$categoria_id = $categorias->cat_ID;
+							$categoria_slug = $categorias->slug;
+							home_tabs ($categoria_id, $categoria_slug);
+						}
+
+						function home_tabs($id_categoria, $slug_categoria){
+							echo '<li class="nav-item">';
+								echo '<a class="nav-link" data-toggle="tab" href="#'.$slug_categoria.'" role="tab">'.get_cat_name($id_categoria).'</a>';
+							echo '</li>';
+						}
+						?>
+
+					</ul>
+					 
+
+				
+					<div class="tab-content">
+
+						<?php	
+	 						//$wp_categorias =  wp_list_categories( array('pad_counts' => 0,'title_li'   => '', 'echo'       => false,'exclude' => 1  ) );
+							foreach(get_categories('exclude = 1') as $categorias) {
+								$numero_post = rand(4,6);
+								$categoria_slug = $categorias->slug;
+								$categoria_id = $categorias->cat_ID;
+								home_posts($categoria_id, $numero_post, $categoria_slug);	
+							} 
+
+							//Variable para ocultar post en mobile (lo usaremos más adelante)
+							$hidden_xs = 0;
+							function home_posts($id_categoria, $post_numero, $slug_categoria){ 
+								echo '<div class="tab-pane" id="'.$slug_categoria.'" role="tabpanel">';
+
+									echo '<div class="card card-block">';
+										echo '<blockquote class="card-blockquote">';
+											echo '<h3><a href="'.get_category_link($id_categoria).'">'.get_cat_name($id_categoria).'</a></h3>';
 											//Plugin Category Images
 											echo '<a href="'.get_category_link($id_categoria).'"><img src="'.z_taxonomy_image_url($id_categoria).'" /></a>';
 											echo category_description($id_categoria);
-									    echo '</blockquote>';
+										echo '</blockquote>';
 									echo '</div>';
-							
-									while($recent->have_posts()) : $recent->the_post(); 
-										++$hidden_xs; $hidden_xs = $hidden_xs % 2;
-										//Condicional para asignar la clase 'hidden-xs' a la mitad de los post para ocultarlos
-										if ($hidden_xs == 0)
-											echo '<div class="card hidden-xs">';
-										else
-											echo '<div class="card">';
 
-												echo '<div class="imagen_post_home">';   
-													echo '<a href="'.get_permalink().'" rel="bookmark" title="'.get_the_title().'">';
-														if ( has_post_thumbnail() ) { the_post_thumbnail(  );
-														} else { 
-															echo '<img src="" alt="'.get_the_title().'" />';
-													    }
-													echo '</a>';
-												echo '</div>'; 
-
-												echo '<div class="texto_post_home">';
-													echo '<span class="categoria">';
-														echo '<i class="fa fa-bookmark" aria-hidden="true"></i> ';
-														echo the_category(' ,');
-														/*foreach((get_the_category()) as $childcat) {
-															if (cat_is_ancestor_of($id_categoria, $childcat)) {
-																echo '<a href="'.get_category_link($childcat->cat_ID).'">';
-																echo '<i class="fa fa-bookmark" aria-hidden="true"></i> ';
-																echo $childcat->cat_name . '</a>';
-																}
-
-															}*/
-
-													echo '</span> ';
-													echo '<span class="separador">| </span>';
-													echo '<span class="fecha"><i class="fa fa-clock-o" aria-hidden="true"></i> '.get_the_time("d.n.y").'</span>';
-													echo '<h5><a href="'.get_permalink().'" rel="bookmark">'.get_the_title().'</a></h5>';
-													echo '<p class="extracto hidden-lg-down">'.get_the_excerpt().'</p>';
-												echo '</div>';
-
-											echo '</div>';	
-
-									endwhile; 
-								wp_reset_query();
-						} 
+									//Query: categoría, número de post y offset
+							 		$recent = new WP_Query ('showposts='.$post_numero.'&offset=0&cat='.$id_categoria.''); 
 								
-					    //$wp_categorias =  wp_list_categories( array('pad_counts' => 0,'title_li'   => '', 'echo'       => false,'exclude' => 1  ) );
-					    foreach(get_categories('exclude = 1') as $categorias) {
-							$categoria_id = $categorias->cat_ID;
-							$numero_post = rand(4,6);
-							home_posts($categoria_id, $numero_post);	} 
-					?>
+										while($recent->have_posts()) : $recent->the_post(); 
+											++$hidden_xs; $hidden_xs = $hidden_xs % 2;
+											//Condicional para asignar la clase 'hidden-xs' a la mitad de los post para ocultarlos
+											if ($hidden_xs == 0)
+												echo '<div class="card hidden-xs">';
+											else
+												echo '<div class="card">';
+
+													echo '<div class="imagen_post_home">';   
+														echo '<a href="'.get_permalink().'" rel="bookmark" title="'.get_the_title().'">';
+															if ( has_post_thumbnail() ) { the_post_thumbnail(  );
+															} else { 
+																echo '<img src="" alt="'.get_the_title().'" />';
+														    }
+														echo '</a>';
+													echo '</div>'; 
+
+													echo '<div class="texto_post_home">';
+														echo '<span class="categoria">';
+															echo '<i class="fa fa-bookmark" aria-hidden="true"></i> ';
+															echo the_category(' ,');
+															/*foreach((get_the_category()) as $childcat) {
+																if (cat_is_ancestor_of($id_categoria, $childcat)) {
+																	echo '<a href="'.get_category_link($childcat->cat_ID).'">';
+																	echo '<i class="fa fa-bookmark" aria-hidden="true"></i> ';
+																	echo $childcat->cat_name . '</a>';
+																	}
+
+																}
+															*/
+															//Mostrar sólo categoría padre de cada entrada mostrada en index.php
+															/*foreach((get_the_category()) as $category) {
+															if ($category->category_parent == 0) {
+															$parentscategory .= ' <a href="' . get_category_link($category->cat_ID) . '" title="' . $category->name . '">' . $category->name . '</a>, ';
+															}
+															}
+															echo $parentscategory;  */
+
+														echo '</span> ';
+														echo '<span class="separador">| </span>';
+														echo '<span class="fecha"><i class="fa fa-clock-o" aria-hidden="true"></i> '.get_the_time("d.n.y").'</span>';
+														echo '<h5><a href="'.get_permalink().'" rel="bookmark">'.get_the_title().'</a></h5>';
+														echo '<p class="extracto hidden-lg-down">'.get_the_excerpt().'</p>';
+													echo '</div>';
+
+												echo '</div>';	
+
+										endwhile; 
+									wp_reset_query();
+
+								echo '</div>';
+							} 
+								
+						?>
+
+					</div>
 				</div>
 
 				<div class="col-xs-12 col-lg-3 sidebar_home">
