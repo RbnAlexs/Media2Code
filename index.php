@@ -1,5 +1,35 @@
 <?php get_header(); ?>
 	<div id="contenedor_articulos" class="container-fluid">
+
+		<section class="container proyectos">
+			<span class="background_proyectos"></span>
+			<div class="row">
+				<div class="col-xs-12 col-md-7 slider">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					  <div class="carousel-inner" role="listbox">
+					    <div class="carousel-item active">
+					      <h1>Hola 1</h1>
+					    </div>
+					    <div class="carousel-item">
+					      <h1>Hola 2</h1>
+					    </div>
+					    <div class="carousel-item">
+					      <h1>Hola 3</h1>
+					    </div>
+					  </div>
+					  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					    <span class="icon-prev" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					    <span class="icon-next" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					  </a>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section class="container articulos">
 			<div class="row">
 			
@@ -83,36 +113,6 @@
 					<?php wp_tag_cloud('smallest=10&largest=50&unit=px&number=45&separator=:: &orderby=count&order=RAND');?>
 				</div>
  
-			</div>
-
-		</section>
-		
-		<section class="container proyectos">
-			<span class="background_proyectos"></span>
-			<div class="row">
-				<div class="col-xs-12 col-md-7 slider">
-					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-					  <div class="carousel-inner" role="listbox">
-					    <div class="carousel-item active">
-					      <h1>Hola 1</h1>
-					    </div>
-					    <div class="carousel-item">
-					      <h1>Hola 2</h1>
-					    </div>
-					    <div class="carousel-item">
-					      <h1>Hola 3</h1>
-					    </div>
-					  </div>
-					  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-					    <span class="icon-prev" aria-hidden="true"></span>
-					    <span class="sr-only">Previous</span>
-					  </a>
-					  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-					    <span class="icon-next" aria-hidden="true"></span>
-					    <span class="sr-only">Next</span>
-					  </a>
-					</div>
-				</div>
 			</div>
 		</section>
 		

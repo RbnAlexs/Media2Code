@@ -2,8 +2,7 @@
 
                _ _      ___            _                    
   _ __  ___ __| (_)__ _|_  )__ ___  __| |___   __ ___ _ __  
- | '  \/ -_) _` | / _` |/ // _/ _ \/ _` / -_)_/ _/ _ \ '  
- |_|_|_\___\__,_|_\__,_/___\__\___/\__,_\___(_)__\___/_|_|_|
+ | '  \/ -_) _` | / _` |/ // _/ _ \/ _` / -_)_/ _/ _ \ '   |_|_|_\___\__,_|_\__,_/___\__\___/\__,_\___(_)__\___/_|_|_|
                                                             
                                                             
 License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
@@ -282,27 +281,27 @@ header a {
 .proyectos:after {
   z-index: 3;
   position: absolute;
-  top: 0;
+  bottom: 0;
   content: " ";
 }
 @media (min-width: 320px) {
   .proyectos:before,
   .proyectos:after {
-    border-top: 70px solid #e74c3c;
+    border-bottom: 70px solid #e74c3c;
   }
 }
 @media (min-width: 992px) {
   .proyectos:before,
   .proyectos:after {
-    border-top: 70px solid #fff;
+    border-bottom: 70px solid #fff;
   }
 }
 .proyectos:before {
-  border-left: 1140px solid transparent;
+  border-right: 1140px solid transparent;
   left: 0;
 }
 .proyectos:after {
-  border-right: 1140px solid transparent;
+  border-left: 1140px solid transparent;
   right: 0;
 }
 .proyectos .background_proyectos {
@@ -342,7 +341,7 @@ header a {
 .proyectos .row .slider .carousel-control.left {
   background: none !important;
 }
-/*  Single */
+/*	Single */
 .articulos_single {
   background: #fff;
   color: #000;

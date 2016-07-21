@@ -226,22 +226,22 @@ header
 	padding 0 !important
 	min-height 200px
 	position relative
-	overflow hidden
+	overflow hidden 
 	/* Magia de pseudoselecciones css3 B| */
 	&:before, &:after
 		z-index 3
 		position absolute
-		top 0
+		bottom 0
 		@media(min-width size_xxs)
-			border-top 70px solid rojo
+			border-bottom 70px solid rojo
 		@media(min-width size_md)
-			border-top 70px solid #fff
+			border-bottom 70px solid #fff
 		content " "
 	&:before
-		border-left 1140px solid transparent
+		border-right 1140px solid transparent
 		left 0
 	&:after
-		border-right 1140px solid transparent
+		border-left 1140px solid transparent
 		right 0
 	.background_proyectos
 		position absolute
