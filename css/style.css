@@ -2,7 +2,8 @@
 
                _ _      ___            _                    
   _ __  ___ __| (_)__ _|_  )__ ___  __| |___   __ ___ _ __  
- | '  \/ -_) _` | / _` |/ // _/ _ \/ _` / -_)_/ _/ _ \ '   |_|_|_\___\__,_|_\__,_/___\__\___/\__,_\___(_)__\___/_|_|_|
+ | '  \/ -_) _` | / _` |/ // _/ _ \/ _` / -_)_/ _/ _ \ '  
+ |_|_|_\___\__,_|_\__,_/___\__\___/\__,_\___(_)__\___/_|_|_|
                                                             
                                                             
 License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
@@ -11,13 +12,21 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
 @import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
 /*  Header  */
-.logo_header {
-  text-align: center;
+@media (min-width: 992px) {
+  .logo_header {
+    text-align: center;
+  }
 }
 @media (min-width: 320px) {
   .logo_header img {
     max-width: 55px;
     height: auto;
+    position: absolute;
+  }
+}
+@media (min-width: 992px) {
+  .logo_header img {
+    position: relative;
   }
 }
 .titulo_header {
@@ -34,6 +43,16 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
   font-family: 'Share Tech Mono';
   text-decoration: none;
 }
+@media (min-width: 320px) {
+  .titulo_header .com {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .titulo_header .com {
+    display: inline;
+  }
+}
 header {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -49,7 +68,23 @@ header a {
   top: 0;
   z-index: 1000;
   width: 100%;
-  background: #2980b9;
+  background: #3498db;
+}
+@media (width: 320px) {
+  .sticky.is-sticky {
+    max-height: 45px;
+  }
+  .sticky.is-sticky .titulo_header {
+    line-height: 2.25em;
+  }
+}
+@media (width: 554px) {
+  .sticky.is-sticky {
+    max-height: none;
+  }
+  .sticky.is-sticky .titulo_header {
+    line-height: 3.25em;
+  }
 }
 .sfm-pos-right .sfm-rollback {
   right: 15px !important;
@@ -71,15 +106,6 @@ header a {
   }
 }
 /*  Home */
-.video {
-  position: relative;
-}
-.video .background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url("https://underc0de.org/recursos/img/pattern.png");
-}
 @media (min-width: 480px) {
   .container-fluid .container .articulos {
     padding: 10px 25px 0px;
@@ -109,9 +135,11 @@ header a {
 @media (min-width: 992px) {
   .articulos .card-columns {
     column-count: 3;
+    border-right: 1px dashed #ecf0f1;
   }
 }
 .articulos .card {
+  z-index: 1;
   overflow: hidden;
   border-radius: 0 !important;
 }
@@ -143,6 +171,12 @@ header a {
 .articulos .card-blockquote img {
   width: 100%;
   height: auto;
+}
+.articulos .card-blockquote p {
+  line-height: 1em;
+  font-weight: 100;
+  padding: 10px 0;
+  margin: 0;
 }
 .imagen_post_home img {
   height: auto;
@@ -177,7 +211,6 @@ header a {
 }
 @media (min-width: 320px) {
   .texto_post_home {
-    position: relative;
     font-size: 0.85rem;
   }
 }
@@ -192,6 +225,7 @@ header a {
   }
 }
 .texto_post_home .categoria {
+  font-family: 'Share Tech Mono';
   color: #3a3737;
 }
 .texto_post_home .categoria a {
@@ -202,6 +236,7 @@ header a {
   text-decoration: none !important;
 }
 .texto_post_home .fecha {
+  font-family: 'Share Tech Mono';
   color: #3a3737;
 }
 .texto_post_home .separador {
@@ -212,7 +247,7 @@ header a {
   text-align: left;
   margin: 10px 0px;
   font-weight: 500;
-  font-size: 1.55rem;
+  font-size: 1.45rem;
 }
 .texto_post_home h5 a {
   color: #3a3737;
@@ -238,15 +273,14 @@ header a {
 }
 .proyectos {
   padding: 0 !important;
-  min-height: 600px;
-  background: ttranspared;
+  min-height: 200px;
   position: relative;
-  background-image: url("https://enleaf.com/wp-content/uploads/2016/02/Software-development-firm.png");
-  background-attachment: fixed;
-/* Magia de pseudoselecciones css3 B| (triangulo)*/
+  overflow: hidden;
+/* Magia de pseudoselecciones css3 B| */
 }
 .proyectos:before,
 .proyectos:after {
+  z-index: 3;
   position: absolute;
   top: 0;
   content: " ";
@@ -271,22 +305,44 @@ header a {
   border-right: 1140px solid transparent;
   right: 0;
 }
-.proyectos .proyectos_background {
+.proyectos .background_proyectos {
   position: absolute;
+  z-index: 1;
   width: 100%;
-  background: rgba(0,0,0,0.75);
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #2c3e50 url("http://www.webcreative.com.mx/img/video-overlay.png") repeat 0 0;
+  opacity: 0.75;
 }
-@media (min-width: 320px) {
-  .proyectos {
-    overflow: hidden;
-  }
+.proyectos .row {
+  min-height: 200px;
+  background: url("https://enleaf.com/wp-content/uploads/2016/02/Software-development-firm.png");
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background: cover;
+  -webkit-background-size: cover;
+  background-position: center;
 }
 @media (min-width: 992px) {
-  .proyectos {
-    overflow: visible;
+  .proyectos .row {
+    background-attachment: fixed;
   }
 }
-/*	Single */
+.proyectos .row .slider {
+  margin: 10em 0;
+  z-index: 1;
+}
+.proyectos .row .slider .carousel-inner {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.proyectos .row .slider .carousel-control.right,
+.proyectos .row .slider .carousel-control.left {
+  background: none !important;
+}
+/*  Single */
 .articulos_single {
   background: #fff;
   color: #000;
@@ -297,10 +353,10 @@ header a {
 }
 .articulos_single .imagen_single {
   position: relative;
+  margin-bottom: 30px;
 }
 @media (min-width: 992px) {
   .articulos_single .texto_single {
-    background: #ecf0f1;
     position: absolute;
     width: 80%;
     bottom: 0;
@@ -327,11 +383,6 @@ header a {
 }
 .articulos_single .contenido_single {
   padding: 10px 15px;
-}
-@media (min-width: 992px) {
-  .articulos_single .contenido_single {
-    margin: 30px 0;
-  }
 }
 .articulos_single .compartir_post {
   text-align: center;
@@ -375,13 +426,25 @@ header a {
 }
 /* Pie de pagina */
 footer {
-  background: #3498db;
   min-height: 200px;
   position: relative;
+}
+footer .info {
+  background: #2c3e50;
 }
 footer .site-info {
   padding-top: 0.9375rem;
   padding-bottom: 0.9375rem;
+}
+@media (min-width: 320px) {
+  footer {
+    background: #e74c3c;
+  }
+}
+@media (min-width: 992px) {
+  footer {
+    background: #2c3e50;
+  }
 }
 footer .logo_footer {
   text-align: center;
@@ -392,11 +455,6 @@ footer .logo_footer img {
 @media (min-width: 320px) {
   footer .logo_footer img {
     max-height: 100px;
-  }
-}
-@media (min-width: 992px) {
-  footer .logo_footer img {
-    max-height: 130px;
   }
 }
 footer .logo_footer img:hover {
@@ -416,7 +474,7 @@ footer .logo_footer img:hover {
   }
 }
 footer .site-title {
-  color: #fff;
+  color: #ecf0f1;
   font-family: 'Share Tech Mono';
 }
 footer .aviso_privacidad {
@@ -463,7 +521,7 @@ footer .suscribete {
   border-bottom: 1px solid #ccc;
   border-radius: 0;
   float: left;
-  width: 85%;
+  width: 80%;
 }
 footer .suscribete::-webkit-input-placeholder {
   color: #ecf0f1;
@@ -476,6 +534,9 @@ footer .suscribete::-moz-placeholder {
 }
 footer .suscribete:-ms-input-placeholder {
   color: #ecf0f1;
+}
+footer .form-group {
+  margin: 1rem 0;
 }
 footer .ultimas_entradas {
   list-style: square;

@@ -35,11 +35,15 @@ padding = .9375rem
 /*!  Header  */
  
 .logo_header 
-	text-align center	
+	@media(min-width size_md)
+		text-align center	
 	img
 		@media(min-width: size_xxs)
 			max-width: 55px
 			height: auto
+			position absolute
+		@media(min-width size_md)
+			position relative
 
 .titulo_header
 	padding: 0 !important
@@ -52,6 +56,11 @@ padding = .9375rem
 			color: blanco
 			font-family: tipografia_titulo
 			text-decoration none
+	.com
+		@media(min-width:size_xxs)
+			display none
+		@media(min-width: size_md)
+			display inline
 	
 
 header
@@ -68,7 +77,17 @@ header
 	top 0
 	z-index 1000
 	width 100%
-	background azul_03 
+	background azul_02
+	@media(width: size_xxs)
+		max-height 45px
+		.titulo_header
+			line-height 2.25em
+	@media(width size_sm)
+		max-height none
+		.titulo_header
+			line-height 3.25em
+	
+	
 
 .sfm-pos-right .sfm-rollback
     right: 15px !important
@@ -88,14 +107,6 @@ header
    
 /*!  Home */
 
-.video
-	position: relative
-	.background
-		position absolute
-		width 100%
-		height 100%
-		background: url('https://underc0de.org/recursos/img/pattern.png')
-
 .container-fluid
 	.container .articulos
 		@media(min-width: size_xs)
@@ -103,7 +114,7 @@ header
 
 
 #contenedor_articulos
-	background: rojo	
+	background rojo
 	
 
 .articulos
@@ -117,7 +128,9 @@ header
 			column-count: 2
 		@media(min-width: size_md)
 			column-count: 3	
+			border-right 1px dashed blanco
 	.card
+		z-index 1
 		overflow: hidden
 		border-radius: 0 !important
 		@media(min-width: size_xxs)
@@ -137,6 +150,11 @@ header
 		img
 			width 100%
 			height auto
+		p 
+			line-height 1em
+			font-weight 100
+			padding 10px 0
+			margin 0
 			
 		
 	
@@ -162,7 +180,6 @@ header
     padding: 10px
     background: #fff
     @media(min-width: size_xxs)
-    	position: relative
     	font-size: 0.85rem
     @media(min-width: size_xs)
     	font-size: 0.95rem
@@ -170,6 +187,7 @@ header
     	font-size: 1rem
     font-family: tipografia_general
     .categoria
+    	font-family tipografia_titulo
     	color: link_general
     	a
     		color: link_general
@@ -177,6 +195,7 @@ header
 	    		color: link_general_hover
 	    		text-decoration: none !important
     .fecha
+    	font-family tipografia_titulo
     	color: link_general
     .separador
     	color: rojo
@@ -185,7 +204,7 @@ header
     	text-align: left
     	margin: 10px 0px
     	font-weight: 500
-    	font-size 1.55rem
+    	font-size 1.45rem
     	a
     		color: link_general
 	    	&:hover
@@ -205,13 +224,12 @@ header
 		
 .proyectos
 	padding 0 !important
-	min-height 600px
-	background ttranspared
+	min-height 200px
 	position relative
-	background-image url(https://enleaf.com/wp-content/uploads/2016/02/Software-development-firm.png)
-	background-attachment fixed
-	/* Magia de pseudoselecciones css3 B| (triangulo)*/
+	overflow hidden
+	/* Magia de pseudoselecciones css3 B| */
 	&:before, &:after
+		z-index 3
 		position absolute
 		top 0
 		@media(min-width size_xxs)
@@ -225,14 +243,36 @@ header
 	&:after
 		border-right 1140px solid transparent
 		right 0
-	.proyectos_background
+	.background_proyectos
 		position absolute
+		z-index 1
 		width 100%
-		background rgba(0, 0, 0, .75)
-	@media(min-width size_xxs)
-		overflow hidden
-	@media(min-width size_md)
-		overflow visible
+		height 100%
+		top 0
+		left 0
+		background azul url('http://www.webcreative.com.mx/img/video-overlay.png') repeat 0 0
+		opacity 0.75
+	.row
+		min-height 200px
+		background url('https://enleaf.com/wp-content/uploads/2016/02/Software-development-firm.png')
+		background-size cover
+		-o-background-size cover
+		-moz-background cover
+		-webkit-background-size cover
+		background-position center 
+		@media(min-width size_md)
+			background-attachment fixed
+		.slider
+			margin 10em 0
+			z-index 1
+			.carousel-inner
+				width 50%
+				margin 0 auto
+				text-align center
+			.carousel-control.right,.carousel-control.left
+				background none !important
+			
+
 		
 /*	Single */
 
@@ -245,9 +285,9 @@ header
 	padding-bottom 10px
 	.imagen_single
 		position relative
+		margin-bottom 30px
 	.texto_single 
 		@media(min-width: size_md)
-			background blanco
 			position absolute
 			width 80%
 			bottom 0
@@ -264,8 +304,6 @@ header
 		height auto
 	.contenido_single 
 		padding 10px 15px
-		@media(min-width: size_md)
-			margin 30px 0
 	.compartir_post
 		text-align center
 		span
@@ -311,10 +349,15 @@ placeholder()
 		{block}
 		
 footer
+	.info
+		background azul
 	.site-info
 		padding-top: padding
 		padding-bottom: padding
-	background: azul_02
+	@media(min-width size_xxs)
+		background rojo
+	@media(min-width size_md)
+		background: azul
 	min-height: 200px
 	position: relative
 	.logo_footer 
@@ -323,8 +366,6 @@ footer
 			width: auto
 			@media(min-width:size_xxs)
 				max-height: 100px
-			@media(min-width:size_md)
-				max-height: 130px  
 			&:hover
 				-webkit-animation: spin 0.7s infinite linear
 				-moz-animation: spin 0.7s infinite linear
@@ -336,7 +377,7 @@ footer
 		@media(min-width: size_md)
 			text-align left
 	.site-title
-		color #fff
+		color: blanco
 		font-family: tipografia_titulo
 		
 	.aviso_privacidad
@@ -368,9 +409,11 @@ footer
 		border-bottom 1px solid #ccc
 		border-radius 0
 		float left
-		width 85%
+		width 80%
 		+placeholder()
 			color blanco
+	.form-group
+		margin 1rem 0
 	.ultimas_entradas
 		list-style square
 		li a 
