@@ -8,13 +8,13 @@
 					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					  <div class="carousel-inner" role="listbox">
 					    <div class="carousel-item active">
-					      <h1>Hola 1</h1>
+					      <h1>Mientras tú dices que es imposible, alguien más lo está programando.</h1>
 					    </div>
 					    <div class="carousel-item">
-					      <h1>Hola 2</h1>
+					      <h1>Un programador sin Dreamweaver es como un pez sin una bicicleta.</h1>
 					    </div>
 					    <div class="carousel-item">
-					      <h1>Hola 3</h1>
+					      <h1>No por mucho mega-ram carga Windows más temprano</h1>
 					    </div>
 					  </div>
 					  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -27,14 +27,18 @@
 					  </a>
 					</div>
 				</div>
-				<div class="col-xs-5">
-					<?php
+				<div class="col-xs-12 col-md-3 slider_post">
+					<ul  class="list-group">
+						<?php
 							$args = array( 'numberposts' => '3' );
 							$recent_posts = wp_get_recent_posts( $args );
 							foreach( $recent_posts as $recent ){
-								echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
+								echo '<li class="list-group-item">';
+								echo '<a href="' . get_permalink($recent["ID"]) . '">' . $recent["post_title"].'</a>';
+								echo '</li> ';
 							}
 						?>
+					</ul>
 				</div>
 			</div>
 		</section>
@@ -43,6 +47,7 @@
 			<div class="row">
 			
 				<div class="col-xs-12 card-columns">	
+					<!-- Campo de búsqueda -->
 					<form class="navbar-form buscar_content" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
 						<div class="form-group">
 							<div class="input-group">
@@ -53,16 +58,20 @@
 							</div>
 						</div>
 					</form>
-
+					
+					<!-- Tabs para la navegación por categoria -->
 					<ul class="nav nav-tabs" role="tablist">
 						<?php
 						$i = 0;
 						foreach(get_categories('exclude = 1') as $categorias) {
+							//condicional para class 'active'
 							if ($i == 0)
 								$first_item = 0;
 							else
 								$first_item = 1;
+							//categoria x ID
 							$categoria_id = $categorias->cat_ID;
+							//categoria x Slug
 							$categoria_slug = $categorias->slug;
 							home_tabs ($categoria_id, $categoria_slug, $first_item);
 							$i++;
@@ -73,6 +82,7 @@
 							if ($item_first == 0)
 								echo '<a class="nav-link active" data-toggle="tab" href="#'.$slug_categoria.'" role="tab">'.get_cat_name($id_categoria).'</a>';
 							else	
+								//Manejamos Slug, ya que al existir nombre de ctegorias con un espacio de por medio, no se respeta el #id de las tabs
 								echo '<a class="nav-link" data-toggle="tab" href="#'.$slug_categoria.'" role="tab">'.get_cat_name($id_categoria).'</a>';
 							echo '</li>';
 						}

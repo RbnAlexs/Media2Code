@@ -7,6 +7,18 @@
                                                             
 License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
 License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+Nota: Querido programador / diseñador web, este
+tema se realizó completamente desde cero, si es
+de tu agrado, puedes visualizar el código comentado 
+desde mi cta de github: RbnAlexs/media2code. 
+
+No te permitas replicar el sitio por completo, 
+es poco profesional y no llegarás a tener la 
+libertad de crear algo propio.
+
+Recuerda - >  sé orginal y comparte código!
+
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
 @import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
@@ -236,9 +248,9 @@ header a {
     display: block;
   }
 }
-.articulos .nav-link.active {
-  background: #2c3e50;
-  color: #ecf0f1;
+.articulos .nav-tabs .active {
+  background: #2c3e50 !important;
+  color: #ecf0f1 !important;
 }
 @media (min-width: 320px) {
   .articulos .tab-content >.tab-pane {
@@ -418,6 +430,9 @@ header a {
 .proyectos .row .slider .carousel-control.right,
 .proyectos .row .slider .carousel-control.left {
   background: none !important;
+}
+.proyectos .row .slider_post {
+  z-index: 3;
 }
 /*	Single */
 .articulos_single {
