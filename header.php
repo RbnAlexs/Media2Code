@@ -6,14 +6,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta property="fb:app_id" content="1791072814463207" />
+	<!-- Google Search Tool -->
+	<meta name="google-site-verification" content="ukThubFpPJQt6HaOdAUSScrPms5gzeuxVD7M7JBm7oQ" />
 	<title><?php wp_title('&raquo;','true','right'); ?><?php bloginfo('name'); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11"> 
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<!-- Hoja de estilo -->
 	<link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style.css">
-	<!-- Latest compiled and minified CSS -->
+	<!-- Bootstrap 4 alpha -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-	<!-- Latest compiled and minified JavaScript -->
 	<div id="fb-root"></div>
+	<!-- JQuert 2.2 -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script>
 	  (function(d, s, id) {
