@@ -32,6 +32,7 @@ size_md = 992px
 size_lg = 1200px
 padding = .9375rem
 
+
 /*!  Header  */
  
 .logo_header 
@@ -107,6 +108,17 @@ header
    
 /*!  Home */
 
+placeholder()
+	&::-webkit-input-placeholder
+		{block}
+	&:-moz-placeholder
+		{block}
+	&::-moz-placeholder
+		{block}
+	&:-ms-input-placeholder
+		{block}
+		
+
 .container-fluid
 	.container .articulos
 		@media(min-width: size_xs)
@@ -156,6 +168,46 @@ header
 			font-weight 100
 			padding 10px 0
 			margin 0
+	.buscar_content
+		@media(min-width size_xxs)
+			background blanco
+			border-bottom-right-radius 5px
+    		border-top-right-radius 5px
+		@media(min-width size_sm)
+			background transparent
+	.buscar
+		background transparent
+		border 0
+		outline none
+		box-shadow none
+		@media(min-width size_sm)
+			border-bottom 1px solid #ccc
+		border-radius 0
+		+placeholder()
+			color azul
+			font-size 1.25em
+			font-weight 100
+	.input-group-btn:last-child
+		>.btn
+			border-bottom-left-radius: 15px;
+		
+	.nav-tabs
+		@media(min-width size_xxs)
+			display none
+		@media (min-width size_md)
+			display block
+	.nav-link.active
+		background azul
+		color blanco
+	.tab-content
+		>.tab-pane
+			@media(min-width size_xxs)
+				display block
+			@media(min-width size_md)
+				display none
+		>.active
+			@media(min-width size_md)
+				display block
 			
 		
 	
@@ -443,5 +495,6 @@ footer
 body
 	font-family tipografia_general !important
 	color link_general
-				
+			
+
 				
