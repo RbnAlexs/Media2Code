@@ -68,10 +68,10 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<span class="site-title">Suscribete, nos gusta dar buenas noticias</span>
-								<form action="">
+								<form action="" class="suscribete_formulario">
 									<div class="form-group">
 										<input id="Field6" name="Field6" rows="6" class="form-control suscribete" placeholder="Escribe tu email">
-	    								<button class="btn btn-success" type="submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+	    								<button class="btn" type="submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
 									</div>
 								</form>
 							</div>

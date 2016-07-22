@@ -181,6 +181,9 @@ header a {
     background: transparent;
   }
 }
+.articulos .buscar_content button {
+  background: #e74c3c;
+}
 .articulos .buscar {
   background: transparent;
   border: 0;
@@ -585,6 +588,9 @@ footer .redes_sociales .instagram small a {
 }
 footer .hecho_de {
   text-align: center;
+}
+footer .suscribete_formulario button {
+  background: #e74c3c;
 }
 footer .suscribete {
   background: transparent;

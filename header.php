@@ -35,7 +35,7 @@
 
 	<?php if ( is_home() || is_front_page() ) : ?>
 
-		<div id="primary" class="container-fluid video">
+		<div id="primary" class="container video">
 			<?php echo do_shortcode('[rev_slider alias="news-background-video3"]'); ?>
 		</div>
 
