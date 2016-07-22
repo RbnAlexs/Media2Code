@@ -2,13 +2,13 @@
 <html <?php language_attributes(); ?> >
 
 <head>
+	<title><?php wp_title('&raquo;','true','right'); ?><?php bloginfo('name'); ?></title>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta property="fb:app_id" content="1791072814463207" />
 	<!-- Google Search Tool -->
 	<meta name="google-site-verification" content="ukThubFpPJQt6HaOdAUSScrPms5gzeuxVD7M7JBm7oQ" />
-	<title><?php wp_title('&raquo;','true','right'); ?><?php bloginfo('name'); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11"> 
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<!-- Hoja de estilo -->

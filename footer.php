@@ -14,7 +14,7 @@
 							</div>
 
 							<div class="col-xs-12 col-sm-7 quienes_somos">
-								<p><span class="site-title">Media2Code == </span> 'somos un grupo de jovenes apasionados por la programación, el diseño y las redes sociales';</p>
+								<p><span class="site-title">Media2Code == </span> '<?php bloginfo( 'description' ); ?>';</p>
 							</div>
 						</div>
 
