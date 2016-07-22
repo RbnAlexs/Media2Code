@@ -38,7 +38,7 @@
 
 	<?php endif; ?>
 
-	<header id="home" class="header container-fluid" data-toggle="sticky-onscroll">
+	<header id="home" class="header container" data-toggle="sticky-onscroll">
 
 		<div class="row">
 

@@ -299,15 +299,17 @@ placeholder()
 		position absolute
 		bottom 0
 		@media(min-width size_xxs)
-			border-bottom 70px solid rojo
+			/*border-bottom 70px solid rojo*/
+			border none !important
 		@media(min-width size_md)
-			border-bottom 70px solid #fff
+			border-bottom 70px solid #fff !important
+			
 		content " "
 	&:before
-		border-right 1140px solid transparent
+		border-right 1140px solid transparent !important
 		left 0
 	&:after
-		border-left 1140px solid transparent
+		border-left 1140px solid transparent !important
 		right 0
 	.background_proyectos
 		position absolute
@@ -510,6 +512,7 @@ footer
 body
 	font-family tipografia_general !important
 	color link_general
+	background azul
 			
 
 				

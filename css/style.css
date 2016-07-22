@@ -377,21 +377,21 @@ header a {
 @media (min-width: 320px) {
   .proyectos:before,
   .proyectos:after {
-    border-bottom: 70px solid #e74c3c;
+    border: none !important;
   }
 }
 @media (min-width: 992px) {
   .proyectos:before,
   .proyectos:after {
-    border-bottom: 70px solid #fff;
+    border-bottom: 70px solid #fff !important;
   }
 }
 .proyectos:before {
-  border-right: 1140px solid transparent;
+  border-right: 1140px solid transparent !important;
   left: 0;
 }
 .proyectos:after {
-  border-left: 1140px solid transparent;
+  border-left: 1140px solid transparent !important;
   right: 0;
 }
 .proyectos .background_proyectos {
@@ -672,4 +672,5 @@ footer .ultimas_entradas li a {
 body {
   font-family: 'Open Sans', sans-serif !important;
   color: #3a3737;
+  background: #2c3e50;
 }
