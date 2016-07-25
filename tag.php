@@ -1,7 +1,24 @@
 <?php get_header();  ?>
 
 <div class="container archive">
-    <div class="col-xs-12 card-columns">
+    <div class="row">
+            <div class="col-xs-12 texto_post_home">
+                <span class="home">
+                <?php
+                    echo '<a href="'.home_url('/').'">';
+                    echo '<i class="fa fa-home"></i> ';
+                    echo 'Inicio';
+                    echo '</a>';
+                ?>
+                </span>
+                <span class="separador"><i class="fa fa-chevron-right" aria-hidden="true" style="color: #000;"></i>  </span>
+                <span class="categoria" style="color: #2980b9;">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                    <?php echo single_tag_title(); ?>
+                </span> 
+                <?php// echo '<img src="'.z_taxonomy_image_url($id_categoria).'" />'; ?>
+            </div>
+    </div>          <div class="col-xs-12 card-columns">
 
         
         <?php if (have_posts()) : while (have_posts()) : the_post();

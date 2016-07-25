@@ -757,6 +757,7 @@ footer .ultimas_entradas li a {
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
   color: #ecf0f1;
+  z-index: 3;
 }
 .scroll-top-wrapper:hover {
   background-color: #ecf0f1;
