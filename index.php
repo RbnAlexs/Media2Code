@@ -4,7 +4,7 @@
 		<section class="container proyectos">
 			<span class="background_proyectos"></span>
 			<div class="row">
-				<div class="col-xs-12 col-md-7 slider">
+				<div class="col-xs-12 col-md-8 slider">
 					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					  <div class="carousel-inner" role="listbox">
 					    <div class="carousel-item active">
@@ -27,7 +27,7 @@
 					  </a>
 					</div>
 				</div>
-				<div class="col-xs-12 col-md-3 slider_post">
+				<div class="col-xs-12 col-md-4 slider_post">
 					<ul  class="list-group">
 						<?php
 							$args = array( 'numberposts' => '3' );

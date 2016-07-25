@@ -283,8 +283,7 @@ placeholder()
 		display: inline-block !important
 		
 .proyectos
-	padding 0 !important
-	min-height 200px
+	//padding 0 !important
 	position relative
 	overflow hidden 
 	/* Magia de pseudoselecciones css3 B| */
@@ -315,23 +314,31 @@ placeholder()
 		background azul url('http://www.webcreative.com.mx/img/video-overlay.png') repeat 0 0
 		opacity 0.75
 	.row
+		@media (min-width size_xxs)
+			padding-bottom 15px
+			padding-top 15px
 		@media (min-width size_md)
 			min-height 500px
+			padding-bottom 70px
+			padding-top 0
 		background url('https://enleaf.com/wp-content/uploads/2016/02/Software-development-firm.png')
 		background-size cover
 		-o-background-size cover
 		-moz-background cover
 		-webkit-background-size cover
 		background-position center 
-		display table
+		//table
+		@media(min-width size_md)
+			display table
 		@media(min-width size_md)
 			background-attachment fixed
 		.slider
-			//margin 10em 0
-			vertical-align middle
 			z-index 1
-			display table-cell
-			float none
+			//table
+			@media(min-width size_md)
+				display table-cell
+				float none
+				vertical-align middle
 			.carousel-inner
 				width 50%
 				margin 0 auto
@@ -340,9 +347,11 @@ placeholder()
 				background none !important
 		.slider_post
 			z-index 3
-			display table-cell
-			vertical-align middle
-			float none
+			//table
+			@media(min-width size_md)
+				display table-cell
+				vertical-align middle
+				float none
 			
 
 		
@@ -447,6 +456,9 @@ placeholder()
 		{block}
 		
 footer
+	@media(min-width size_md)
+		position absolute !important
+		width 100%
 	.info
 		background azul
 	.site-info

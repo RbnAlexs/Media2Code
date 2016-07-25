@@ -9,7 +9,7 @@
 					<div class="col-xs-12 col-md-6 col-lg-5">
 
 						<div class="row">
-							<div class="col-xs-12 col-sm-5 logo_footer">
+							<div class="col-xs-12 col-sm-4 logo_footer">
 								<img src="<?php echo get_bloginfo('template_directory')?>/images/logo_header.png" alt="<?php echo get_bloginfo('title')?>">
 							</div>
 

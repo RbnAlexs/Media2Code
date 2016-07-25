@@ -2,6 +2,7 @@
 
 <div class="container archive">
     <div class="col-xs-12 card-columns">
+
         
         <?php if (have_posts()) : while (have_posts()) : the_post();
 
