@@ -558,10 +558,18 @@ header a {
   font-family: 'Share Tech Mono';
   padding: 0 15px;
 }
+/* Search, Categories y Tags*/
+.archive {
+  background: #ecf0f1;
+  padding: 15px 0;
+}
 .pagination .current {
   background: #3498db;
   color: #ecf0f1;
   border-color: #3498db;
+}
+.pagination_row {
+  text-align: center;
 }
 /* Pie de pagina */
 footer {

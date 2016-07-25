@@ -1,47 +1,49 @@
 <?php get_header();  ?>
-<div class="container-fluid">
-	<div class="central"></div>
-</div>
 
+<div class="container archive">
+	<div class="col-xs-12 card-columns">
+		
+		<?php if (have_posts()) : while (have_posts()) : the_post();
 
-<div class="container">
-<div class="col-xs-12 col-sm-12 col-md-8">
-	
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<div class="post_cat">
-    <div class="imagen_cat">   
-	<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>">
-	<?php if ( has_post_thumbnail() ) { the_post_thumbnail();} else { ?>
-    <img src="<?php bloginfo('template_directory'); ?>/css/images/img_default.png" alt="<?php the_title(); ?>" />
-		<?php } ?> 
-	</a>
+			//Condicional para asignar la clase 'hidden-xs' a la mitad de los post para ocultarlos
+			echo '<div class="card">';
+				echo '<div class="imagen_post_home">';   
+					echo '<a href="'.get_permalink().'" rel="bookmark" title="'.get_the_title().'">';
+						if ( has_post_thumbnail() ) { the_post_thumbnail(  );
+						} else { 
+							echo '<img src="" alt="'.get_the_title().'" />';
+						    }
+					echo '</a>';
+				echo '</div>'; 
+
+				echo '<div class="texto_post_home">';
+					echo '<span class="categoria">';
+						echo '<i class="fa fa-bookmark" aria-hidden="true"></i> ';
+						echo the_category(' ,');
+					echo '</span> ';
+					echo '<span class="separador_home">| </span>';
+					echo '<span class="fecha"><i class="fa fa-clock-o" aria-hidden="true"></i> '.get_the_time("d.n.y").'</span>';
+					echo '<h5><a href="'.get_permalink().'" rel="bookmark">'.get_the_title().'</a></h5>';
+					echo '<p class="extracto hidden-lg-down">'.get_the_excerpt().'</p>';
+				echo '</div>';
+			echo '</div>';	
+
+		endwhile; endif;
+		?>
 	</div>
-	<div class="titulo_cat">
-	   <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-    </div>
-    <div class="nuevo_excerpt">
-    <?php echo the_excerpt(); ?>
-    </div>
-			<!--
-			<div class="date">
-				<?php echo 'Publicado hace '. human_time_diff(get_the_time('U'), current_time('timestamp')); ?>
-			</div>
-			<div class="readmore">
-				<a href="<?php the_permalink(); ?>">Ver más</a>
-			</div>
-			-->
-	</div>
-	<?php endwhile; ?>
-	<?php endif; ?>
+
+	<div class="row pagination_row">
 	<?php
-	if ( function_exists('bootstrap_pagination') ) {
-	   bootstrap_pagination();
-	}
+		if ( function_exists('bootstrap_pagination') ) {
+		   	bootstrap_pagination();
+		}
 	?>
-	
-</div>
- 	
+	</div>
 
- 	
+	<script>
+		jQuery('.page-numbers').addClass('page-link').removeClass('.page-numbers');
+	</script>
+		 	 	
 </div>
+
 <?php get_footer(); ?>
