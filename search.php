@@ -38,6 +38,10 @@
 	   bootstrap_pagination();
 	}
 	?>
+
+	<script>
+		jQuery('.page-numbers').addClass('page-link').removeClass('.page-numbers');
+	</script>
 	
 </div>
  	

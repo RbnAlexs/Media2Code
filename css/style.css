@@ -558,6 +558,11 @@ header a {
   font-family: 'Share Tech Mono';
   padding: 0 15px;
 }
+.pagination .current {
+  background: #3498db;
+  color: #ecf0f1;
+  border-color: #3498db;
+}
 /* Pie de pagina */
 footer {
   min-height: 200px;

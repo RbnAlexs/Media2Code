@@ -290,7 +290,7 @@ add_action( 'customize_preview_init', 'tcx_customizer_live_preview' );
 	        <ul class="pagination pagination-centered">
 	          <?php
 	          foreach ( $paginate as $page ) {
-	              if(!preg_match('/^<span class="page-numbers dots">/',$page)){
+	              if(!preg_match('/^<span class="page-link dots">/',$page)){
 	                 echo '<li class="page-item">' . $page . '</li>';
 	              }
 	          }
