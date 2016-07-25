@@ -21,7 +21,7 @@
 						<div class="row redes_sociales">
 
 							<div class="col-xs-4 twitter">
-								<a href="http://twitter.com/media2code"><i class="fa fa-twitter" aria-hidden="true"></i></i></a>
+								<a href="http://twitter.com/media2code"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 								<small><a href="http://twitter.com/media2code" target="_blank"><strong>Síguenos</strong><br/>en Twitter</a></small>
 							</div>
 
@@ -31,9 +31,8 @@
 							</div>
 
 							<div class="col-xs-4 instagram">
-								<a href="instagram.com/media2code">
-									<i class="fa fa-envelope-o" aria-hidden="true"></i> <small><a href="instagram.com/media2code" target="_blank"><strong>Contáctanos</strong></br>por email</a></small>
-								</a>
+								<a href="instagram.com/media2code"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> 
+								<small><a href="instagram.com/media2code" target="_blank"><strong>Contáctanos</strong></br>por email</a></small>
 							</div>
 						</div>
 						
@@ -159,7 +158,34 @@
 		  });
 		});
 	</script> 
+	
+	<div class="scroll-top-wrapper ">
+		<span class="scroll-top-inner">
+			<i class="fa fa-2x fa-arrow-circle-up"></i>
+		</span>
+	</div>
+	<script>
+		$(function(){ 
+			$(document).on( 'scroll', function(){
+				if ($(window).scrollTop() > 100) {
+					$('.scroll-top-wrapper').addClass('show');
+				} else {
+					$('.scroll-top-wrapper').removeClass('show');
+				}
+			});
+			$('.scroll-top-wrapper').on('click', scrollToTop);
+		});
+		 
+		function scrollToTop() {
+			verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+			element = $('body');
+			offset = element.offset();
+			offsetTop = offset.top;
+			$('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
+		}
+	</script>	
 
 <?php wp_footer(); ?>
+
 </body>
 </html>

@@ -1,22 +1,43 @@
 <?php get_header();  ?>
         <div id="contenedor_articulos" class="container-fluid">
 
+
+
+
             <div class="container articulos_single">
+                    
+
                 <div class="row">
+
                     <div class="col-xs-12 col-sm-9">
+                        <?php //breadcrumbs(); ?>
                         <?php while ( have_posts() ) : the_post(); ?>
 
-                            <div class=" row">
-
-                                <div class="col-xs-12 imagen_single">
-                                    <div class="texto_post_home texto_single">
-                                        <h2 class="titulo_single"><?php the_title(); ?></h2>
+                            <div class="row">
+                                <div class="col-xs-12 texto_post_home">
+                                        <span class="home">
+                                        <?php
+                                            echo '<a href="'.home_url('/').'">';
+                                                echo '<i class="fa fa-home"></i> ';
+                                                echo 'Inicio';
+                                            echo '</a>';
+                                        ?>
+                                        </span>
+                                        <span class="separador"><i class="fa fa-chevron-right" aria-hidden="true"></i>  </span>
                                         <span class="categoria">
                                             <i class="fa fa-bookmark" aria-hidden="true"></i>
                                             <?php the_category(' ,') ?>
                                         </span> 
                                         <span class="separador">| </span>
                                         <span class="fecha"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_date('F d, Y'); ?></span>
+
+                                </div>
+                            </div>
+
+                            <div class=" row">
+                                <div class="col-xs-12 imagen_single">
+                                    <div class="texto_post_home texto_single">
+                                        <h2 class="titulo_single"><?php the_title(); ?></h2>
                                     </div>
                                     <?php if ( has_post_thumbnail() ) {
                                         the_post_thumbnail();} 
@@ -25,6 +46,7 @@
                                     <?php } ?> 
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-xs-12 contenido_single">
                                     <?php the_content(); ?>
@@ -34,7 +56,6 @@
                                     <?php the_tags('<i class="fa fa-tags" aria-hidden="true"></i> ', ' ', ''); ?>
                                 </div>
                             </div>
-
 
                             <div class="row compartir_post">
                                     <h5>Compartelo con tus amigos y corre la voz ;)</h5>
@@ -68,8 +89,10 @@
 
                     </div> <!-- Fin contenido principal -->
 
-                    <div class="col-xs-12 col-sm-3">
+                    <div class="col-xs-12 col-sm-3 sidebar">
+
                         <h4>Articulos relacionados</h4>
+                    
                           <?php
                               global $post;
                               $category = get_the_category($post->ID);
@@ -81,15 +104,13 @@
                               ?>
                               
                                <div class="col-xs-12"> 
-                                    <?php the_post_thumbnail(  ); ?>
+                                    <?php the_post_thumbnail(); ?>
 
                                    <div class="titulo_categoria"><a href="<?php the_permalink() ?>"><?php the_title('')?></a></div>  
                                   
                                    <div class="extracto_categoria"><?php echo get_the_excerpt(); ?></div>
 
                                 </div>
-
-
 
                             <?php wp_reset_postdata();?>
                             <?php endforeach; ?>

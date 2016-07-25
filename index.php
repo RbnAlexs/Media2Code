@@ -167,7 +167,7 @@
 																echo $parentscategory;  */
 
 															echo '</span> ';
-															echo '<span class="separador">| </span>';
+															echo '<span class="separador_home">| </span>';
 															echo '<span class="fecha"><i class="fa fa-clock-o" aria-hidden="true"></i> '.get_the_time("d.n.y").'</span>';
 															echo '<h5><a href="'.get_permalink().'" rel="bookmark">'.get_the_title().'</a></h5>';
 															echo '<p class="extracto hidden-lg-down">'.get_the_excerpt().'</p>';

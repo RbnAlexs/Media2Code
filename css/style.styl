@@ -66,7 +66,8 @@ header
 	top 0
 	z-index 1000
 	width 100%
-	background azul_02
+	//azul_02 con rgba
+	background rgba(52, 152, 219, .96)
 	@media(width: size_xxs)
 		max-height 45px
 		.titulo_header
@@ -76,7 +77,7 @@ header
 		.titulo_header
 			line-height 3.25em
 	
-	
+/* Menú Superfly */
 
 .sfm-pos-right .sfm-rollback
     right: 15px !important
@@ -158,13 +159,17 @@ placeholder()
 			margin 0
 	.buscar_content
 		@media(min-width size_xxs)
-			background blanco
-			border-bottom-right-radius 5px
-    		border-top-right-radius 5px
+			background #fff
+			@media(min-width size_sm)
+				border-bottom-right-radius 5px
+    			border-top-right-radius 5px 
 		@media(min-width size_sm)
 			background transparent
 		button
-			background rojo 
+			@media(min-width size_xxs)
+				background azul
+			@media(min-width size_sm)
+				background rojo 
 	.buscar
 		background transparent
 		border 0
@@ -173,6 +178,8 @@ placeholder()
 		@media(min-width size_sm)
 			border-bottom 1px solid #ccc
 		border-radius 0
+		&:focus
+			border-bottom 1px solid rojo
 		+placeholder()
 			color azul
 			font-size 1.25em
@@ -180,12 +187,17 @@ placeholder()
 	//Botón de búsqueda
 	.input-group-btn:last-child
 		>.btn
-			border-bottom-left-radius: 15px;
-		
+			@media(min-width size_xxs)
+				border-bottom-left-radius 15px !important
+				border-top-right-radius 0px
+    			border-bottom-right-radius 0px
+    		@media(min-width size_md)
+    			border-radius .25rem
+    			border-bottom-left-radius 15px !important
 	.nav-tabs
 		@media(min-width size_xxs)
 			display none
-		@media (min-width size_md)
+		@media (min-width size_md) 
 			display block
 		.active
 			background azul !important
@@ -203,7 +215,7 @@ placeholder()
 				display block
 			
 		
-	
+/* Single */	
 .imagen_post_home img
 	height: auto
 	opacity 1
@@ -220,8 +232,6 @@ placeholder()
     	max-height: 550px
     	width: 100%
 
-
-
 .texto_post_home
     padding: 10px
     background: #fff
@@ -232,7 +242,7 @@ placeholder()
     @media(min-width: size_md)
     	font-size: 1rem
     font-family: tipografia_general
-    .categoria
+    .categoria, .home, .divisor
     	font-family tipografia_titulo
     	color: link_general
     	a
@@ -244,8 +254,12 @@ placeholder()
     	font-family tipografia_titulo
     	color: link_general
     .separador
-    	color: rojo
+    	//color: rojo
     	font-weight: 700
+    	font-size 0.75em
+    	margin-right 5px
+    .separador_home
+    	color rojo
     h5
     	text-align: left
     	margin: 10px 0px
@@ -337,11 +351,13 @@ placeholder()
 		position relative
 		margin-bottom 30px
 	.texto_single 
+		border 1px solid blanco
 		@media(min-width: size_md)
 			position absolute
 			width 80%
 			bottom 0
 			border-top-right-radius 50px 
+			background-image: url('http://www.marianabenitez.com/wp-content/themes/betheme/images/stripes/stripes_5_b.png')
 	.titulo_single
 		font-family tipografia_titulo
 		text-align left
@@ -382,6 +398,11 @@ placeholder()
 				text-decoration none
 		i 
 			color azul
+.sidebar
+	border-left 1px solid blanco
+	h4 
+		font-family tipografia_titulo
+		padding 0 15px
 		
 		
 	
@@ -441,6 +462,10 @@ footer
 	.redes_sociales
 		.twitter,.facebook,.instagram
 			display: inline-block
+			@media(min-width size_xxs)
+				text-align center
+			@media(min-width size_md)
+				text-align left
 			> a
 				display: inline-block
 				font-size: 2.5em
@@ -471,6 +496,32 @@ footer
 		list-style square
 		li a 
 			color blanco
+			
+/* Scroll to top */
+.scroll-top-wrapper
+	background-color rojo
+	bottom 40px
+	right 30px
+	padding 10px
+	text-align center
+	overflow hidden
+	visibility hidden
+	opacity 0
+	position fixed
+	line-height 30px
+	border-bottom-right-radius 10px
+	border-top-left-radius 10px
+	color blanco
+	&:hover
+		background-color blanco
+		color azul
+@media(min-width size_md)
+	.scroll-top-wrapper.show
+			visibility visible
+			cursor pointer
+			opacity 1
+	
+	
 		
 
 /*! General */

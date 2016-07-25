@@ -1,4 +1,30 @@
 <?php
+
+	// MIGAJAS DE PAN
+	function breadcrumbs() {
+
+		echo '<div class="row">';
+			echo '<div class="col-xs-12 breadcrumbs">';
+				echo '<a href="'.home_url('/').'">';
+					echo '<i class="fa fa-home"></i> ';
+					echo 'Inicio';
+				echo '</a>';
+					echo '<span class="divider"> > </span>';
+					if(!is_home()) {
+		 				echo '<span class="pagina_actual">';
+						if (is_category() || is_single() || is_home() ) {
+							echo '<i class="fa fa-bookmark" aria-hidden="true"></i> ';
+							the_category(' <span class="divider"> > </span> ');
+						} elseif (is_page()) {
+						// echo the_title();
+						}
+		 				echo '</span>';
+					}
+			echo '</div>';
+		echo '</div>'; 
+	}
+	add_shortcode( 'breadcrumbs', 'breadcrumbs' );
+
 	
 	register_nav_menus( array(
     	'primary' => __( 'Primary Menu', 'BS3Theme' ),
