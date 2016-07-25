@@ -315,18 +315,23 @@ placeholder()
 		background azul url('http://www.webcreative.com.mx/img/video-overlay.png') repeat 0 0
 		opacity 0.75
 	.row
-		min-height 200px
+		@media (min-width size_md)
+			min-height 500px
 		background url('https://enleaf.com/wp-content/uploads/2016/02/Software-development-firm.png')
 		background-size cover
 		-o-background-size cover
 		-moz-background cover
 		-webkit-background-size cover
 		background-position center 
+		display table
 		@media(min-width size_md)
 			background-attachment fixed
 		.slider
-			margin 10em 0
+			//margin 10em 0
+			vertical-align middle
 			z-index 1
+			display table-cell
+			float none
 			.carousel-inner
 				width 50%
 				margin 0 auto
@@ -335,6 +340,9 @@ placeholder()
 				background none !important
 		.slider_post
 			z-index 3
+			display table-cell
+			vertical-align middle
+			float none
 			
 
 		
