@@ -281,8 +281,8 @@ add_action( 'customize_preview_init', 'tcx_customizer_live_preview' );
 	            'total' => $query->max_num_pages,
 	            'format' => '?paged=%#%',
 	            'current' => max( 1, get_query_var('paged') ),
-	            'prev_text' => __('Previous'),
-	            'next_text' => __('Next'),
+	            'prev_text' => __('Anterior'),
+	            'next_text' => __('Siguiente'),
 	        )
 	  );
 	  if ($query->max_num_pages > 1) :
@@ -291,7 +291,7 @@ add_action( 'customize_preview_init', 'tcx_customizer_live_preview' );
 	          <?php
 	          foreach ( $paginate as $page ) {
 	              if(!preg_match('/^<span class="page-numbers dots">/',$page)){
-	                 echo '<li>' . $page . '</li>';
+	                 echo '<li class="page-item">' . $page . '</li>';
 	              }
 	          }
 	          ?>

@@ -108,8 +108,6 @@
 
                                    <div class="titulo_categoria"><a href="<?php the_permalink() ?>"><?php the_title('')?></a></div>  
                                   
-                                   <div class="extracto_categoria"><?php echo get_the_excerpt(); ?></div>
-
                                 </div>
 
                             <?php wp_reset_postdata();?>

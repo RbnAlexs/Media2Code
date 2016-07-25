@@ -542,6 +542,18 @@ header a {
 .sidebar {
   border-left: 1px solid #ecf0f1;
 }
+.sidebar >div {
+  margin-bottom: 10px;
+}
+.sidebar >div .titulo_categoria {
+  line-height: 1.1em;
+  text-align: justify;
+  padding: 5px 0;
+}
+.sidebar >div .titulo_categoria a {
+  color: #3a3737;
+  font-weight: 100;
+}
 .sidebar h4 {
   font-family: 'Share Tech Mono';
   padding: 0 15px;
