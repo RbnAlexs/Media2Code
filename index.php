@@ -3,7 +3,14 @@
 
 		<section class="container proyectos">
 			<span class="background_proyectos"></span>
-			<div class="row">
+			<div id="landing-content" class="row">
+				<script>
+					$('#landing-content').mousemove(function(e){
+					    var amountMovedX = (e.pageX * -1 / 20);
+					    var amountMovedY = (e.pageY * -1 / 20);
+					    $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
+					});
+				</script>
 				<div class="col-xs-12 col-md-8 slider">
 					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					  <div class="carousel-inner" role="listbox">
