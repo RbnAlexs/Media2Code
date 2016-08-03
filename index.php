@@ -6,23 +6,29 @@
 			<div id="landing-content" class="row">
 				<script>
 					$('#landing-content').mousemove(function(e){
-					    var amountMovedX = (e.pageX * -1 / 20);
-					    var amountMovedY = (e.pageY * -1 / 20);
+					    var amountMovedX = (e.pageX * -1 / 50);
+					    var amountMovedY = (e.pageY * -1 / 50);
 					    $(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
 					});
 				</script>
 				<div class="col-xs-12 col-md-8 slider">
 					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					  <div class="carousel-inner" role="listbox">
-					    <div class="carousel-item active">
-					      <h1>Mientras tú dices que es imposible, alguien más lo está programando.</h1>
-					    </div>
-					    <div class="carousel-item">
-					      <h1>Un programador sin Dreamweaver es como un pez sin una bicicleta.</h1>
-					    </div>
-					    <div class="carousel-item">
-					      <h1>No por mucho mega-ram carga Windows más temprano</h1>
-					    </div>
+						<?php if (have_posts()) : 
+								$i = 0;
+								$my_query = new WP_Query('showposts=3');
+								   while ($my_query->have_posts()) : $my_query->the_post();
+								   		if ($i == 0)
+								   			echo '<div class="carousel-item active">';
+								   		else
+											echo '<div class="carousel-item ">';
+										echo '<h1><a href="' . get_permalink($recent["ID"]) . '">'.get_the_title().'</a></h1>';
+										echo '</div> ';
+									$i++;
+									endwhile;
+								wp_reset_query();
+							   endif;
+						?>
 					  </div>
 					  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
 					    <span class="icon-prev" aria-hidden="true"></span>

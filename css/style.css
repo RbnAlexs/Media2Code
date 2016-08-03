@@ -42,6 +42,9 @@
     display: inline;
   }
 }
+.video {
+  padding: 0 !important;
+}
 header {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -101,8 +104,15 @@ header a {
     padding: 10px 25px 0px;
   }
 }
-#contenedor_articulos {
-  background: #2c3e50;
+@media (min-width: 480px) {
+  #contenedor_articulos {
+    background: #e74c3c;
+  }
+}
+@media (min-width: 992px) {
+  #contenedor_articulos {
+    background-image: url("https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png") !important;
+  }
 }
 .articulos {
   padding-top: 0.9375rem;
@@ -168,6 +178,7 @@ header a {
   font-weight: 100;
   padding: 10px 0;
   margin: 0;
+  font-family: 'Share Tech Mono';
 }
 @media (min-width: 320px) {
   .articulos .buscar_content {
@@ -200,6 +211,7 @@ header a {
   outline: none;
   box-shadow: none;
   border-radius: 0;
+  -webkit-transition: 0.3s ease-in-out;
 }
 @media (min-width: 554px) {
   .articulos .buscar {
@@ -279,8 +291,8 @@ header a {
 .imagen_post_home img {
   height: auto;
   opacity: 1;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 .imagen_post_home img:hover {
   opacity: 0.5;
@@ -455,6 +467,10 @@ header a {
 .proyectos .row .slider {
   z-index: 1;
 }
+.proyectos .row .slider a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
 @media (min-width: 992px) {
   .proyectos .row .slider {
     display: table-cell;
@@ -559,7 +575,6 @@ header a {
   background: #2c3e50;
   color: #ecf0f1;
   padding: 2px 5px;
-  border-radius: 3px;
 }
 .articulos_single .tags a:hover {
   text-decoration: none;
@@ -584,12 +599,19 @@ header a {
 }
 .sidebar h4 {
   font-family: 'Share Tech Mono';
-  padding: 0 15px;
+  padding: 10px 15px 5px;
+  border-top: 5px solid #2c3e50;
+  color: #2c3e50;
+}
+.sidebar .widget {
+  box-shadow: 0px 0px 1px #ccc;
 }
 /* Search, Categories y Tags*/
 .archive {
   background: #ecf0f1;
-  padding: 15px 0;
+}
+.archive .card-columns {
+  padding: 15px;
 }
 .pagination .current {
   background: #3498db;
@@ -606,8 +628,8 @@ footer {
 }
 @media (min-width: 992px) {
   footer {
-    position: absolute !important;
-    width: 100%;
+    border-top: 10px dashed #fff;
+    padding-top: 25px;
   }
 }
 footer .info {
@@ -720,6 +742,10 @@ footer .suscribete {
   border-radius: 0;
   float: left;
   width: 80%;
+  -webkit-transition: 0.3s ease-in-out;
+}
+footer .suscribete:focus {
+  border-bottom: 1px solid #e74c3c;
 }
 footer .suscribete::-webkit-input-placeholder {
   color: #ecf0f1;
@@ -806,5 +832,14 @@ footer .ultimas_entradas li a {
 body {
   font-family: 'Open Sans', sans-serif !important;
   color: #3a3737;
-  background: #2c3e50 !important;
+}
+@media (min-width: 320px) {
+  body {
+    background: #e74c3c !important;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    background-image: url("https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png") !important;
+  }
 }

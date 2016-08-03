@@ -1,9 +1,6 @@
 <?php get_header();  ?>
         <div id="contenedor_articulos" class="container-fluid">
 
-
-
-
             <div class="container articulos_single">
                     
 
@@ -90,31 +87,56 @@
                     </div> <!-- Fin contenido principal -->
 
                     <div class="col-xs-12 col-sm-3 sidebar">
-
-                        <h4>Articulos relacionados</h4>
-                    
-                          <?php
-                              global $post;
-                              $category = get_the_category($post->ID);
-                              $category = $category[0]->cat_ID;
-                              $myposts = get_posts(array('numberposts' =>'3', 'category__in' => array($category), 'post__not_in' => array($post->ID),'post_status'=>'publish'));
-                              foreach($myposts as $post) :
-                              setup_postdata($post);
-                            
-                              ?>
-                              
-                               <div class="col-xs-12"> 
-                                    <?php the_post_thumbnail(); ?>
-
-                                   <div class="titulo_categoria"><a href="<?php the_permalink() ?>"><?php the_title('')?></a></div>  
+                        <div class="row">
+                            <div class="col-xs-12 widget">
+                                <h4><i class="fa fa-thumb-tack" aria-hidden="true"></i></i> Articulos relacionados</h4>
+                        
+                                <?php
+                                  global $post;
+                                  $category = get_the_category($post->ID);
+                                  $category = $category[0]->cat_ID;
+                                  $myposts = get_posts(array('numberposts' =>'3', 'category__in' => array($category), 'post__not_in' => array($post->ID),'post_status'=>'publish'));
+                                  foreach($myposts as $post) :
+                                  setup_postdata($post);
+                                
+                                  ?>
                                   
-                                </div>
+                                   <div class="col-xs-12"> 
+                                        <?php the_post_thumbnail(); ?>
 
-                            <?php wp_reset_postdata();?>
-                            <?php endforeach; ?>
+                                       <div class="titulo_categoria"><a href="<?php the_permalink() ?>"><?php the_title('')?></a></div>  
+                                      
+                                    </div>
 
-                        <div class="fb-page" data-href="https://www.facebook.com/media2code" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/media2code" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/media2code">Media2Code</a></blockquote></div>
+                                <?php wp_reset_postdata();?>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h4><i class="fa fa-star" aria-hidden="true"></i></i> Lo más leído</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 widget">
+
+                                <h4><i class="fa fa-facebook" aria-hidden="true"></i> M2C en Facebook</h4>
+                                <div class="fb-page" data-href="https://www.facebook.com/media2code" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/media2code" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/media2code">Media2Code</a></blockquote></div>
+                            
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-xs-12 widget">
+
+                                <h4><i class="fa fa-twitter" aria-hidden="true"></i> M2C en Twitter</h4>
+                                <a class="twitter-timeline"  href="https://twitter.com/media2code" data-widget-id="371767581037719552">Tweets por el @media2code.</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+                            </div>
+                        </div>
 
                     </div><!-- Sidebar -->
 
