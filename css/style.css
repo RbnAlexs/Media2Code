@@ -582,6 +582,23 @@ header a {
 .articulos_single .tags i {
   color: #2c3e50;
 }
+.articulos_single .articulos_tags {
+  font-family: 'Share Tech Mono';
+  padding: 10px 15px 5px;
+  border-top: 5px solid #2c3e50;
+  color: #2c3e50;
+  font-size: 1.85em;
+}
+.articulos_single .imagen_tag {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+}
+.articulos_single .imagen_tag img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .sidebar {
   border-left: 1px solid #ecf0f1;
 }
@@ -596,6 +613,9 @@ header a {
 .sidebar >div .titulo_categoria a {
   color: #3a3737;
   font-weight: 100;
+}
+.sidebar .imagen_sidebar {
+  margin-bottom: 15px;
 }
 .sidebar h4 {
   font-family: 'Share Tech Mono';
