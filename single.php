@@ -101,7 +101,7 @@
                                 
                                   ?>
                                   
-                                   <div class="col-xs-12"> 
+                                   <div class="figure"> 
                                         <?php the_post_thumbnail(); ?>
 
                                        <div class="titulo_categoria"><a href="<?php the_permalink() ?>"><?php the_title('')?></a></div>  
@@ -116,6 +116,21 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <h4><i class="fa fa-star" aria-hidden="true"></i></i> Lo más leído</h4>
+                               
+                                    <?php
+                                        query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC&posts_per_page=5');
+                                        if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+                                           <div class="figure"> 
+                                                <?php the_post_thumbnail(); ?>
+
+                                               <div class="titulo_categoria"><a href="<?php the_permalink() ?>"><?php the_title('')?></a></div>  
+                                              
+                                            </div>
+                                        <?php
+                                        endwhile; endif;
+                                        wp_reset_query();
+                                    ?>                                                            
                             </div>
                         </div>
                         <div class="row">
