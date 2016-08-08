@@ -58,7 +58,9 @@
 
 
                             <div class="row compartir_post">
-                                    <h5>Compartelo con tus amigos y corre la voz ;)</h5>
+                                    <div class="col-xs-12">
+                                        <h5>Compartelo con tus amigos y corre la voz ;)</h5>
+                                    </div>
 
                                     <div class="col-xs-3 col-md-1  col-md-push-4 share">
                                         <a href="#">
@@ -78,8 +80,10 @@
 
                             <?php  echo do_shortcode('[starbox] ') ;?>  
 
-                            <div class="row">
-                                <h1 class="articulos_tags"><i class="fa fa-hand-spock-o" aria-hidden="true"></i> Articulos recomendados</h1>
+                            <div class="row articulos_tags">
+                                <div class="col-xs-12">
+                                    <h1><i class="fa fa-hand-spock-o" aria-hidden="true"></i> Articulos recomendados</h1>
+                                </div>
                             <?php  
                                 //Articulos relacionador por etiquetas (tags)
                                  $orig_post = $post;  
@@ -136,7 +140,7 @@
                                   ?>
                                   
                                        <div class="imagen_sidebar"> 
-                                           <?php the_post_thumbnail(); ?>
+                                           <a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
                                            <div class="titulo_categoria"><a href="<?php the_permalink() ?>"><?php the_title('')?></a></div>  
                                        </div>
 
@@ -153,8 +157,7 @@
                                         query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC&posts_per_page=5');
                                         if (have_posts()) : while (have_posts()) : the_post(); ?>
                                                <div class="imagen_sidebar"> 
-                                                    <?php the_post_thumbnail(); ?>
-
+                                                    <a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
                                                    <div class="titulo_categoria"><a href="<?php the_permalink() ?>"><?php the_title('')?></a></div>  
                                                 </div>
                                         <?php

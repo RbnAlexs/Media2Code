@@ -434,7 +434,7 @@ header a {
   opacity: 0.75;
 }
 .proyectos .row {
-  background: url("https://enleaf.com/wp-content/uploads/2016/02/Software-development-firm.png");
+  background: url("http://i0.wp.com/controlagency.mx/wp-content/uploads/2015/11/cabecera-news2.png?w=1335");
   background-size: cover;
   -o-background-size: cover;
   -moz-background: cover;
@@ -582,12 +582,15 @@ header a {
 .articulos_single .tags i {
   color: #2c3e50;
 }
-.articulos_single .articulos_tags {
+.articulos_single .articulos_tags h1 {
   font-family: 'Share Tech Mono';
   padding: 10px 15px 5px;
   border-top: 5px solid #2c3e50;
   color: #2c3e50;
   font-size: 1.85em;
+}
+.articulos_single .articulos_tags >div {
+  padding: 20px 15px;
 }
 .articulos_single .imagen_tag {
   position: relative;
