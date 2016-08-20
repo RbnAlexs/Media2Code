@@ -1,0 +1,49 @@
+/*
+Trabajar con Git
+Verificar la versión actual de git instalada en el sistema:;
+# git version 
+Añadir autior al fichero
+# git config --global user.email "miemail@ejemplo.com"
+# git config --global user.name "Ruben Sanchez"
+Verificar datos del autor
+# git config --list --global | grep user
+Cambiar al directorio local donde tenemos nuestros ficheros
+# cd C:\directorio
+Verificar los archivos presentes en el directorio así como su fecha y hora de creación
+# ls -la
+Inicializar git
+# git init
+Verificar inicializacion de git
+#ls -la (debe de aparecer un archivo .git)
+Añadir ficheros al repositorio
+# git add archivo.php
+# git add . // para añadir todos los archivos presentes en la carpeta selecionada
+Verificar archivos en el fichero
+# git status
+Guardar cambios de los ficheros en el repositorio
+# git commit -m "Creada la página de inicio, por ejemplo"
+ó
+# git commit -am "Creada la pagina de inicio"
+Verificar todos los cambios hechos en los ficheros de los repositorios
+# git log (git log --oneline es una linea resumida)
+Subir repositorio a Github (nos pedira nombre y contraseña de la cta)
+# git remote add NombreDelProyecto https://github.com/RbnAlexs/GIT.git
+Verificar repositorios subidos a Github y subir nuevos cambios
+# git push NombreDelProyecto master
+Verificar repositorios de GitHub
+# git remote -v 
+Subir proyecto a Github
+# git push NombreDelProyecto master 
+=^^^=
+HOLA MUNDO .CSS, .HTML, .PHP
+Así es
+Trabajar con Github
+Quiero subir los cambios a un repositorio reomoto (github)
+a. Crear un usuario en Github.com
+b. Creado el proyecto en Github.com
+c. Vincular el repositorio remoto en Github en el repositorio local Git
+# git remote add GIT https://github.com/RbnAlexs/GIT.git
+d. Empujar mis cambios locales al remoto dado de alta en el paso c.
+# git push GIT master
+HOLAMUNDO :B;
+/*
