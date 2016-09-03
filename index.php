@@ -59,7 +59,7 @@
 		<section class="container articulos">
 			<div class="row">
 			
-				<div class="col-xs-12 card-columns">	
+				<div class="card-columns">	
 					<!-- Campo de búsqueda -->
 					<form class="navbar-form buscar_content" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
 						<div class="form-group">
