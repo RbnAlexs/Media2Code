@@ -44,6 +44,7 @@
 }
 .video {
   padding: 0 !important;
+  overflow: hidden;
 }
 header {
   padding-top: 5px;
