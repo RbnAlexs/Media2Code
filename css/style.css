@@ -561,8 +561,11 @@ header a {
   }
 }
 .articulos_single img {
-  width: auto;
+  width: 100%;
   height: auto;
+}
+.articulos_single p > img {
+  width: auto !important;
 }
 .articulos_single .contenido_single {
   padding: 10px 15px;
