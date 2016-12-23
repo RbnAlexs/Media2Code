@@ -567,6 +567,19 @@ header a {
 .articulos_single p > img {
   width: auto !important;
 }
+.articulos_single img.alignright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+.articulos_single img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+.articulos_single img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .articulos_single .contenido_single {
   padding: 10px 15px;
 }
