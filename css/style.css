@@ -1,3 +1,26 @@
+/*
+
+               _ _      ___            _                    
+  _ __  ___ __| (_)__ _|_  )__ ___  __| |___   __ ___ _ __  
+ | '  \/ -_) _` | / _` |/ // _/ _ \/ _` / -_)_/ _/ _ \ '   |_|_|_\___\__,_|_\__,_/___\__\___/\__,_\___(_)__\___/_|_|_|
+                                                            
+                                                            
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+Author: R. Alejandro Sánchez
+
+Nota: Querido programador / diseñador web, este
+tema se realizó completamente desde cero, si es
+de tu agrado, puedes visualizar el código comentado 
+desde mi cta de github: RbnAlexs/media2code. 
+
+No te permitas replicar el sitio por completo, 
+es poco profesional y no llegarás a tener la 
+libertad de crear algo propio.
+
+Recuerda - >  sé orginal y comparte código!
+
+*/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
 @import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
 /*  Header  */
@@ -538,11 +561,8 @@ header a {
   }
 }
 .articulos_single img {
-  width: 100%;
+  width: auto;
   height: auto;
-}
-.articulos_single p img {
-  width: auto !important;
 }
 .articulos_single .contenido_single {
   padding: 10px 15px;
