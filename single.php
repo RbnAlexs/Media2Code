@@ -1,15 +1,9 @@
 <?php get_header();  ?>
         <div id="contenedor_articulos" class="container-fluid">
-
             <div class="container articulos_single">
-                    
-
                 <div class="row">
-
                     <div class="col-xs-12 col-sm-9">
-
                         <?php while ( have_posts() ) : the_post(); ?>
-
                             <div class="row">
                                 <div class="col-xs-12 texto_post_home">
                                         <span class="home">
@@ -27,10 +21,8 @@
                                         </span> 
                                         <span class="separador">| </span>
                                         <span class="fecha"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_date('F d, Y'); ?></span>
-
                                 </div>
                             </div>
-
                             <div class=" row">
                                 <div class="col-xs-12 imagen_single">
                                     <div class="texto_post_home texto_single">
@@ -43,7 +35,6 @@
                                     <?php } ?> 
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-xs-12 contenido_single">
                                     <?php the_content(); ?>
@@ -53,18 +44,15 @@
                                     <?php the_tags('<i class="fa fa-tags" aria-hidden="true"></i> ', ' ', ''); ?>
                                 </div>
                             </div>
-
                         <?php endwhile;?>
-
-
                             <div class="row compartir_post">
                                     <div class="col-xs-12">
                                         <h5>Compartelo con tus amigos y corre la voz ;)</h5>
                                     </div>
-
                                     <div class="col-xs-3 col-md-1  col-md-push-4 share">
-                                        <a href="#">
-                                            <i class="fa fa-share" aria-hidden="true"></i>
+                                        <a href="">
+                                            <?php echo do_shortcode('[email_link]');?>
+                                            <i class="icon-envelope-alt" aria-hidden="true"></i>
                                         </a>
                                     </div>
                                     <div class="col-xs-3 col-md-1  col-md-push-4 facebook_share">
@@ -112,23 +100,15 @@
                                  wp_reset_query(); 
                             ?>  
                             </div>
-
-
-
                             <div class="fb-comments" data-href="<?php echo the_permalink() ?>" data-colorscheme="light" data-numposts="5"></div> 
                             <style>.fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style] {width: 100% !important;}
                             .fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style] {width: 100% !important;}
                             </style>     
-
-
                     </div> <!-- Fin contenido principal -->
-
                     <div class="col-xs-12 col-sm-3 sidebar">
-
                         <div class="row">
                             <div class="col-xs-12 widget">
                                 <h4><i class="fa fa-thumb-tack" aria-hidden="true"></i></i> Articulos relacionados</h4>
-                        
                                 <?php
                                   //Articulos relacionados por categoria
                                   global $post;
@@ -148,11 +128,9 @@
                                 <?php endforeach; ?>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-xs-12">
                                 <h4><i class="fa fa-star" aria-hidden="true"></i></i> Lo más leído</h4>
-                               
                                     <?php
                                         query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC&posts_per_page=5');
                                         if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -166,7 +144,6 @@
                                     ?>                                                            
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-xs-12 widget">
 
@@ -175,23 +152,15 @@
                             
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-xs-12 widget">
-
                                 <h4><i class="fa fa-twitter" aria-hidden="true"></i> M2C en Twitter</h4>
                                 <a class="twitter-timeline"  href="https://twitter.com/media2code" data-widget-id="371767581037719552">Tweets por el @media2code.</a>
                                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          
                             </div>
                         </div>
-
                     </div><!-- Sidebar -->
-
-
                 </div> <!-- Fila del contenido principal-->
             </div>
-
         </div>
-
 <?php get_footer(); ?>
