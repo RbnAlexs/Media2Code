@@ -51,8 +51,7 @@
                                     </div>
                                     <div class="col-xs-3 col-md-1  col-md-push-4 share">
                                         <a href="">
-                                            <?php echo do_shortcode('[email_link]');?>
-                                            <i class="icon-envelope-alt" aria-hidden="true"></i>
+                                            <?php if(function_exists('email_link')) { email_link(); } ?>
                                         </a>
                                     </div>
                                     <div class="col-xs-3 col-md-1  col-md-push-4 facebook_share">
