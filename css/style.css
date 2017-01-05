@@ -809,6 +809,7 @@ footer .suscribete {
 }
 footer .suscribete:focus {
   border-bottom: 1px solid #e74c3c;
+  color: #ecf0f1;
 }
 footer .suscribete::-webkit-input-placeholder {
   color: #ecf0f1;

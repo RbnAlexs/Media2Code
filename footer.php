@@ -68,10 +68,7 @@
 							<div class="col-xs-12">
 								<span class="site-title">Suscribete, nos gusta dar buenas noticias</span>
 								<form action="" class="suscribete_formulario">
-									<div class="form-group">
-										<input id="Field6" name="Field6" rows="6" class="form-control suscribete" placeholder="Escribe tu email">
-	    								<button class="btn" type="submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
-									</div>
+									<?php echo do_shortcode('[mc4wp_form id="7756"]');?>
 								</form>
 							</div>
 
@@ -104,7 +101,7 @@
 				<div class="col-xs-12 copyright">
 					© Media2Code | Todos los derechos reservados | Realizado con: <i class="fa fa-wordpress" aria-hidden="true"></i> + <i class="fa fa-heart" aria-hidden="true"></i> 
 					<div class="copyright-links">
-						<a href="#">Aviso de Privacidad</a> | <a href="#">Nota Legal</a> | 2016
+						<a href="#">Aviso de Privacidad</a> | <a href="#">Nota Legal</a> | 2017
 					</div>
 
 				</div>
