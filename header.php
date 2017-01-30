@@ -4,9 +4,11 @@
 <head>
 	<title><?php wp_title('&raquo;','true','right'); ?><?php bloginfo('name'); ?></title>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<!-- Maximum Scale Viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta author="media2code team">
+    <!-- Facebook Comments -->
 	<meta property="fb:app_id" content="1791072814463207" />
 	<!-- Google Search Tool -->
 	<meta name="google-site-verification" content="ukThubFpPJQt6HaOdAUSScrPms5gzeuxVD7M7JBm7oQ" />
@@ -14,6 +16,8 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<!-- Hoja de estilo -->
 	<link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style.css">
+	<!-- Hoja de estilo para "versión impresa" -->
+	<link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style_print.css" media"print">
 	<!-- Bootstrap 4 alpha -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 	<!-- JQuert 2.2 -->

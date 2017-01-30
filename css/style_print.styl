@@ -1,0 +1,643 @@
+header
+	display none !important
+rojo = #E74C3C
+blanco = #ECF0F1
+azul = #2C3E50
+azul_02 = #3498DB
+azul_03 = #2980B9
+link_general = #3a3737
+link_general_hover = azul_02
+texto_general = #404040
+tipografia_general = 'Open Sans', sans-serif
+tipografia_titulo =  'Share Tech Mono'
+
+size_xxs = 320px
+size_xs = 480px
+size_sm = 554px
+size_md = 992px
+size_lg = 1200px
+padding = .9375rem
+
+/*!  Header  */
+ 
+.logo_header 
+	@media(min-width size_md)
+		text-align center	
+	img
+		@media(min-width: size_xxs)
+			max-width: 55px
+			height: auto
+			position absolute
+		@media(min-width size_md)
+			position relative
+
+.titulo_header
+	padding: 0 !important
+	line-height: 3.25em
+	.site-title
+		font-size: 2em
+		text-align: center
+		margin: 0 auto
+		a
+			color: blanco
+			font-family: tipografia_titulo
+			text-decoration none
+	.com
+		@media(min-width:size_xxs)
+			display none
+		@media(min-width: size_md)
+			display inline
+	
+.video 
+	padding 0 !important
+	overflow hidden 
+	
+header
+	padding-top 5px 
+	padding-bottom 5px
+	background: azul
+	a
+		color: blanco 
+
+.sticky.is-sticky 
+	position fixed
+	left 0
+	right 0
+	top 0
+	z-index 1000
+	width 100%
+	//azul_02 con rgba
+	background rgba(52, 152, 219, .96)
+	@media(width: size_xxs)
+		max-height 45px
+		.titulo_header
+			line-height 2.25em
+	@media(width size_sm)
+		max-height none
+		.titulo_header
+			line-height 3.25em
+	
+/* Menú Superfly */
+
+.sfm-pos-right .sfm-rollback
+    right: 15px !important
+    
+.sfm-navicon-button.sf_label_default
+	position fixed !important 
+	
+.sfm-navicon-button:after
+	@media(min-width: size_xxs)
+		display none !important
+	@media(min-width: size_md)
+		display inline-block !important
+		position: absolute !important
+		left: -135% !important
+		top: 25% !important
+	
+   
+/*!  Home */
+
+placeholder()
+	&::-webkit-input-placeholder
+		{block}
+	&:-moz-placeholder
+		{block}
+	&::-moz-placeholder
+		{block}
+	&:-ms-input-placeholder
+		{block}
+		
+
+.container-fluid
+	.container .articulos
+		@media(min-width: size_xs)
+			padding: 10px 25px 0px;
+
+
+#contenedor_articulos
+	@media(min-width size_xs)
+		background rojo
+	@media(min-width size_md)
+		background-image url('https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png') !important
+
+.articulos
+	padding-top: padding
+	@media(min-width: 320px)
+		background: rojo
+	@media(min-width: 550px) 
+		background: #fff
+	.card-columns
+		@media(min-width: size_sm)
+			column-count: 2
+		@media(min-width: size_md)
+			column-count: 3	
+			border-right 1px dashed blanco
+	.card
+		z-index 1
+		overflow: hidden
+		border-radius: 0 !important
+		@media(min-width: size_xxs)
+			border: none
+		@media(min-width: size_sm)
+			border-left 1px solid blanco;
+			border-bottom 1px solid blanco
+	.card-block
+		background: azul
+		h3 
+			text-align center
+			a
+				@media(min-width: size_xxs)
+					color: blanco
+				text-decoration: none !important
+				font-family: tipografia_titulo
+	.card-blockquote
+		img
+			width 100%
+			height auto
+		p 
+			line-height 1em
+			font-weight 100
+			padding 10px 0
+			margin 0
+			font-family tipografia_titulo
+	.buscar_content
+		@media(min-width size_xxs)
+			background #fff
+			@media(min-width size_sm)
+				border-bottom-right-radius 5px
+    			border-top-right-radius 5px 
+		@media(min-width size_sm)
+			background transparent
+		button
+			@media(min-width size_xxs)
+				background azul
+			@media(min-width size_sm)
+				background rojo 
+	.buscar
+		background transparent
+		border 0
+		outline none
+		box-shadow none
+		@media(min-width size_sm)
+			border-bottom 1px solid #ccc
+		border-radius 0
+		-webkit-transition .3s ease-in-out
+		&:focus
+			border-bottom 1px solid rojo
+		+placeholder()
+			color azul
+			font-size 1.25em
+			font-weight 100
+	//Botón de búsqueda
+	.input-group-btn:last-child
+		>.btn
+			@media(min-width size_xxs)
+				border-bottom-left-radius 15px !important
+				border-top-right-radius 0px
+    			border-bottom-right-radius 0px
+    		@media(min-width size_md)
+    			border-radius .25rem
+    			border-bottom-left-radius 15px !important
+	.nav-tabs
+		@media(min-width size_xxs)
+			display none
+		@media (min-width size_md) 
+			display block
+		.active
+			background azul !important
+			color blanco !important
+		.nav-item
+			margin-left 0 !important
+	.tab-content
+		>.tab-pane
+			@media(min-width size_xxs)
+				display block
+			@media(min-width size_md)
+				display none
+		>.active
+			@media(min-width size_md)
+				display block
+			
+		
+/* Single */	
+.imagen_post_home img
+	height: auto
+	opacity 1
+	-webkit-transition .1s ease-in-out
+	transition .1s ease-in-out
+	&:hover
+		opacity .5
+	@media (min-width: 320px)
+	    width: 100%
+    @media (min-width: 400px)
+    	max-height: 600px
+    	width: 100%
+    @media (min-width: 1020px)
+    	max-height: 550px
+    	width: 100%
+
+.texto_post_home
+    padding: 10px
+    background: #fff
+    @media(min-width: size_xxs)
+    	font-size: 0.85rem
+    @media(min-width: size_xs)
+    	font-size: 0.95rem
+    @media(min-width: size_md)
+    	font-size: 1rem
+    font-family: tipografia_general
+    .categoria, .home, .divisor
+    	font-family tipografia_titulo
+    	color: link_general
+    	a
+    		color: link_general
+	    	&:hover
+	    		color: link_general_hover
+	    		text-decoration: none !important
+    .fecha
+    	font-family tipografia_titulo
+    	color: link_general
+    .separador
+    	//color: rojo
+    	font-weight: 700
+    	font-size 0.75em
+    	margin-right 5px
+    .separador_home
+    	color rojo
+    h5
+    	text-align: left
+    	margin: 10px 0px
+    	font-weight: 500
+    	font-size 1.45rem
+    	a
+    		color: link_general
+	    	&:hover
+	    		color: link_general_hover
+	    		text-decoration: none !important
+	.extracto
+		color: texto_general
+		font-weight 100
+    		
+/*! Ocultar la mitad de posts en responsivo */
+
+.hidden-xs
+	@media (min-width: 320px)
+		display:none !important
+	@media (min-width: 550px)
+		display: inline-block !important
+		
+.proyectos
+	//padding 0 !important
+	position relative
+	overflow hidden 
+	/* Magia de pseudoselecciones css3 B| */
+	&:before, &:after
+		z-index 3
+		position absolute
+		bottom 0
+		@media(min-width size_xxs)
+			/*border-bottom 70px solid rojo*/
+			border none !important
+		@media(min-width size_md)
+			border-bottom 70px solid #fff !important
+			
+		content " "
+	&:before
+		border-right 1140px solid transparent !important
+		left 0
+	&:after
+		border-left 1140px solid transparent !important
+		right 0
+	.background_proyectos
+		position absolute
+		z-index 1
+		width 100%
+		height 100%
+		top 0px
+		left 0
+		background azul url('http://media2code.com/wp-content/uploads/2016/11/particles_bg-white.png') repeat 0 0
+		opacity 0.75
+	.row
+		@media (min-width size_xxs)
+			padding-bottom 15px
+			padding-top 15px
+		@media (min-width size_md)
+			min-height 500px
+			padding-bottom 70px
+			padding-top 0
+		background url('http://i0.wp.com/controlagency.mx/wp-content/uploads/2015/11/cabecera-news2.png?w=1335')
+		background-size cover
+		-o-background-size cover
+		-moz-background cover
+		-webkit-background-size cover
+		background-position center 
+		//table
+		@media(min-width size_md)
+			display table
+		@media(min-width size_md)
+			background-attachment fixed
+		.slider
+			z-index 1
+			a 
+				color blanco
+				text-decoration none
+			//table
+			@media(min-width size_md)
+				display table-cell
+				float none
+				vertical-align middle
+			.carousel-inner
+				width 50%
+				margin 0 auto
+				text-align center
+			.carousel-control.right,.carousel-control.left
+				background none !important
+		.slider_post
+			z-index 3
+			//table
+			@media(min-width size_md)
+				display table-cell
+				vertical-align middle
+				float none
+			
+
+		
+/*	Single */
+
+.articulos_single
+	background #fff
+	color #000
+	font-weight normal
+	font-size 1em
+	padding-top 10px
+	padding-bottom 10px
+	.imagen_single
+		position relative
+		margin-bottom 30px
+	.texto_single 
+		border 1px solid blanco
+		@media(min-width: size_md)
+			position absolute
+			width 80%
+			bottom 0
+			border-top-right-radius 50px 
+			background-image: url('http://www.marianabenitez.com/wp-content/themes/betheme/images/stripes/stripes_5_b.png')
+	.titulo_single
+		font-family tipografia_titulo
+		text-align left
+		@media(min-width: size_xxs)
+			font-size 1.55rem
+		@media(min-width: size_md)
+			font-size 2rem
+	img
+		width 100%
+		height auto
+	p > img
+		width auto !important
+	img.alignright
+		float right 
+		margin 0 0 1em 1em
+	img.alignleft
+		float left
+		margin 0 1em 1em 0
+	img.aligncenter
+		display block
+		margin-left auto
+		margin-right auto
+	.contenido_single 
+		padding 10px 15px
+	.compartir_post
+		text-align center
+		span
+			@media(min-width size_xxs)
+				font-size 1em
+				line-height 1em
+		a 
+			font-size 2em
+		.share a 
+			color #2c3e50
+		.whats_share a
+			color #33ba46
+		.facebook_share a
+			color #3b5998
+		.twitter_share a 
+			color #50abf1
+	.tags
+		margin 0 0 35px
+		font-size 0.95em
+		a 
+			background azul
+			color blanco
+			padding 2px 5px
+			&:hover
+				text-decoration none
+		i 
+			color azul
+	.articulos_tags
+		h1
+			font-family: 'Share Tech Mono';
+			padding: 10px 15px 5px;
+			border-top: 5px solid #2c3e50;
+			color: #2c3e50;
+			font-size: 1.85em;
+		>div
+			padding 20px 15px
+	.imagen_tag
+		position relative
+		height 140px 
+		overflow hidden
+		img 
+			position absolute
+			top 0
+			left 0
+.sidebar
+	border-left 1px solid blanco
+	>div 
+		margin-bottom 10px
+		.titulo_categoria
+			line-height 1.10em
+			text-align justify	
+			padding 5px 0
+			a 
+				color link_general
+				font-weight 100
+	.imagen_sidebar
+		margin-bottom 15px
+	h4 
+		font-family tipografia_titulo
+		padding 10px 15px 5px
+		border-top 5px solid azul
+		color azul 
+	.widget
+		box-shadow: 0px 0px 1px #ccc;
+		
+/* Search, Categories y Tags*/
+.archive
+	background blanco
+	.card-columns
+		padding 15px
+.pagination
+	.current
+		background azul_02
+		color blanco
+		border-color azul_02
+.pagination_row
+	text-align center 
+		
+		
+/* Pie de pagina */
+
+placeholder()
+	&::-webkit-input-placeholder
+		{block}
+	&:-moz-placeholder
+		{block}
+	&::-moz-placeholder
+		{block}
+	&:-ms-input-placeholder
+		{block}
+		
+footer
+	@media(min-width size_md)
+		//position absolute !important
+		//width 100%
+		border-top 10px dashed #fff
+		padding-top 25px
+	.info
+		background azul
+	.site-info
+		padding-top: padding
+		padding-bottom: padding
+	@media(min-width size_xxs)
+		background rojo
+	@media(min-width size_md)
+		background: azul
+	min-height: 200px
+	position: relative
+	.logo_footer 
+		text-align: center
+		img
+			width: auto
+			@media(min-width:size_xxs)
+				max-height: 100px
+			&:hover
+				-webkit-animation: spin 0.7s infinite linear
+				-moz-animation: spin 0.7s infinite linear
+				-o-animation: spin 0.7s infinite linear
+				-ms-animation: spin 0.7s infinite linear
+	.quienes_somos
+		@media(min-width: size_xxs)
+			text-align center
+		@media(min-width: size_md)
+			text-align left
+	.site-title
+		color: blanco
+		font-family: tipografia_titulo
+		
+	.aviso_privacidad
+		background: azul_03
+		.copyright
+			font-size: 0.85rem
+			text-align: center
+			color: blanco
+			a
+				color: blanco
+	.redes_sociales
+		.twitter,.facebook,.instagram
+			display: inline-block
+			@media(min-width size_xxs)
+				text-align center
+			@media(min-width size_md)
+				text-align left
+			> a
+				display: inline-block
+				font-size: 2.5em
+				color: blanco
+			small
+				display: inline-block
+				a
+					color: blanco
+	.hecho_de
+			text-align center
+	.suscribete_formulario
+		button
+			background rojo 
+	.suscribete
+		background transparent
+		border 0
+		outline none
+		box-shadow none
+		border-bottom 1px solid #ccc
+		border-radius 0
+		float left
+		width 80%
+		-webkit-transition .3s ease-in-out
+		&:focus
+			border-bottom 1px solid rojo
+			color blanco
+		+placeholder()
+			color blanco
+	.form-group
+		margin 1rem 0
+	.ultimas_entradas
+		list-style square
+		li a 
+			color blanco
+			
+/* Scroll to top */
+.scroll-top-wrapper
+	background-color rojo
+	bottom 40px
+	right 30px
+	padding 10px
+	text-align center
+	overflow hidden
+	visibility hidden
+	opacity 0
+	position fixed
+	line-height 30px
+	border-bottom-right-radius 10px
+	border-top-left-radius 10px
+	color blanco
+	z-index 3
+	&:hover
+		background-color blanco
+		color azul
+@media(min-width size_md)
+	.scroll-top-wrapper.show
+			visibility visible
+			cursor pointer
+			opacity 1
+	
+	
+		
+
+/*! General */
+
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg);}
+	100% { -webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin {
+	0% { -moz-transform: rotate(0deg);}
+	100% { -moz-transform: rotate(360deg);}
+}
+@-o-keyframes spin {
+	0% { -o-transform: rotate(0deg);}
+	100% { -o-transform: rotate(360deg);}
+}
+@-ms-keyframes spin {
+	0% { -ms-transform: rotate(0deg);}
+	100% { -ms-transform: rotate(360deg);}
+}
+
+body
+	font-family tipografia_general !important
+	color link_general
+	@media(min-width size_xxs)
+		background rojo !important
+	@media(min-width size_md)
+		background-image url('https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png') !important
+			
+
+				
