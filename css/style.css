@@ -907,3 +907,8 @@ body {
     background-image: url("https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png") !important;
   }
 }
+@media print {
+  header {
+    display: none;
+  }
+}

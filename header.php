@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> >
-
 <head>
 	<title><?php wp_title('&raquo;','true','right'); ?><?php bloginfo('name'); ?></title>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -16,8 +15,6 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<!-- Hoja de estilo -->
 	<link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style.css">
-	<!-- Hoja de estilo para "versión impresa" -->
-	<link rel="stylesheet" href="<?php bloginfo('template_directory');?>/style_print.css" media"print">
 	<!-- Bootstrap 4 alpha -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 	<!-- JQuert 2.2 -->
@@ -41,26 +38,18 @@
 	</script> 
 	<?php wp_head(); ?>
 </head>
-
-
 <body <?php body_class(); ?> >
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZ42P4"
 	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-
 	<?php if ( is_home() || is_front_page() ) : ?>
-
 		<div id="primary" class="container video">
 			<?php echo do_shortcode('[rev_slider alias="news-background-video3"]'); ?>
 		</div>
-
 	<?php endif; ?>
-
 	<header id="home" class="header container" data-toggle="sticky-onscroll">
-
 		<div class="row">
-
 				<div class="col-xs-3 col-lg-1 logo_header ">
 					<?php
 					echo '<div class="logo_header"><a href="'.esc_url( home_url( '/' ) ).'">';
@@ -68,19 +57,15 @@
 					echo '</a></div>'; 
 					?>
 				</div>
-
 				<div class="col-xs-6 col-lg-2 titulo_header ">
 					<?php 				
 						echo '<div class="site-title"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'name' ).'<span class="com">.com</span></a></div>';
 						echo '<span class="site-description hidden-xs-up"><a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'" rel="home">'.get_bloginfo( 'description' ).'</a></span>';
 					?>
 				</div>     
-
 				<div class="col-xs-9 hidden-lg-down">
 				</div>
-
 		</div>
-
 	</header> 
 
 
