@@ -20,6 +20,8 @@ libertad de crear algo propio.
 
 Recuerda - >  sé orginal y comparte código!
 
+Media2Code Theme 1.7
+
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
 @import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
@@ -717,6 +719,7 @@ footer .logo_footer {
 }
 footer .logo_footer img {
   width: auto;
+/* Logo animation, Animación del logo en el footer*/
 }
 @media (min-width: 320px) {
   footer .logo_footer img {
@@ -806,6 +809,7 @@ footer .suscribete {
   float: left;
   width: 80%;
   -webkit-transition: 0.3s ease-in-out;
+/* Stylus of input form (suscribe) */
 }
 footer .suscribete:focus {
   border-bottom: 1px solid #e74c3c;
@@ -893,9 +897,15 @@ footer .ultimas_entradas li a {
     -ms-transform: rotate(360deg);
   }
 }
+/* Text selection color, Color del texto seleccionado*/
 body {
   font-family: 'Open Sans', sans-serif !important;
   color: #3a3737;
+}
+body ::-moz-selection,
+body ::selection {
+  color: #ecf0f1;
+  background: #2c3e50;
 }
 @media (min-width: 320px) {
   body {
@@ -907,6 +917,7 @@ body {
     background-image: url("https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png") !important;
   }
 }
+/* Media CSS Print, CSS para impresiones*/
 @media print {
   header {
     display: none;

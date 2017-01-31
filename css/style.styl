@@ -21,6 +21,8 @@ libertad de crear algo propio.
 
 Recuerda - >  sé orginal y comparte código!
 
+Media2Code Theme 1.7
+
 */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300')
@@ -547,6 +549,7 @@ footer
 			width: auto
 			@media(min-width:size_xxs)
 				max-height: 100px
+			/* Logo animation, Animación del logo en el footer*/
 			&:hover
 				-webkit-animation: spin 0.7s infinite linear
 				-moz-animation: spin 0.7s infinite linear
@@ -602,6 +605,7 @@ footer
 		&:focus
 			border-bottom 1px solid rojo
 			color blanco
+		/* Stylus of input form (suscribe) */
 		+placeholder()
 			color blanco
 	.form-group
@@ -657,15 +661,19 @@ footer
 	0% { -ms-transform: rotate(0deg);}
 	100% { -ms-transform: rotate(360deg);}
 }
-
+/* Text selection color, Color del texto seleccionado*/
 body
+	::-moz-selection, ::selection
+		color blanco
+		background azul
 	font-family tipografia_general !important
 	color link_general
 	@media(min-width size_xxs)
 		background rojo !important
 	@media(min-width size_md)
 		background-image url('https://www.brainpickings.org/wp-content/themes/brainpickings/images/bckgd_body.png') !important
-			
+
+/* Media CSS Print, CSS para impresiones*/			
 @media print
 	header
 		display none
